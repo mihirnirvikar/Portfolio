@@ -1,10 +1,9 @@
-import {Body} from './components/Body.jsx';
+import { Body } from "./components/Body/Body.jsx";
+import { Outlet } from "react-router-dom";
 
 export const App = () => {
-  return (
-    <div>
-      <Body />
-    </div>
-  );
+  return <>
+    <Body />
+    <Outlet />
+  </>;
 };
-
