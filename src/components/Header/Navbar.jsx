@@ -63,7 +63,7 @@ export const Navbar = () => {
             <path d="M11.25 16.25v-5h1.5v5h-1.5Z"></path>
           </svg>
 
-          <Link to="/achievement">Achievement</Link>
+          <Link to="/achievements">Achievement</Link>
         </div>
 
         <div className="flex items-center gap-1">

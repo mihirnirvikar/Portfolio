@@ -2,7 +2,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { About } from "./components/Body/About.jsx";
+import { Overview } from "./components/Overview/Overview.jsx";
+import { Project } from "./components/Project/Project.jsx";
+import { Achievement } from "./components/Achievement/Achievement.jsx";
+import { Experience } from "./components/Experience/Experience.jsx";
+import { Contact } from "./components/Contact/Contact.jsx";
+import { Resume } from "./components/Resume/Resume.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -10,9 +16,29 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/about",
-        element: <About />,
-      }
+        index: true,
+        element: <Overview />,
+      },
+      {
+        path: "/projects",
+        element: <Project />,
+      },
+      {
+        path: "/achievements",
+        element: <Achievement />,
+      },
+      {
+        path: "/experience",
+        element: <Experience />,
+      },
+      {
+        path: "/resume",
+        element: <Resume />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
     ],
   },
 ]);

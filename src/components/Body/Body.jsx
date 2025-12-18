@@ -1,16 +1,11 @@
-import { Header } from './Header.jsx';
-import { Navbar } from './Navbar.jsx';
 import { About } from './About.jsx';
+import { Outlet } from 'react-router-dom';
 
 export const Body = () => {
     return (
-        <div>
-            <Header />
-            <Navbar />
-
-            <hr />
+        <div className="flex">
             <About />
-            
+            <Outlet />
         </div>
     )
 }
