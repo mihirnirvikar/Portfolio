@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 export const About = () => {
   return (
     <>
-      <div className="w-88 lg:ml-36 md:ml-10 xlg:ml-80 mt-10 mb-10 p-2 ">
+      <div className="w-88 lg:ml-36 md:ml-10 mt-10 mb-10 p-2 ">
         <div className="items-center text-left">
           <img
             className="w-76 h-76 rounded-full"
             src="https://images.rawpixel.com/image_png_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMl9ibGFja19mbGF0X3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2Zfc2V0X29mXzRfc183YWRhN2I5MC1iNDFhLTQwZmYtYWQxOC04MWNmZjQ4NWFlM2QtbTN3dXc4c3MucG5n.png"
             alt="Mihir Nirvikar Image"
           />
-          <p className="mt-2 text-3xl font-bold">Mihir Nirvikar</p>
-          <p>Full Stack Developer</p>
+          <p className="mt-2 text-3xl font-bold ml-4">Mihir Nirvikar</p>
+          <p className="mt-2 ml-4 text-xl">Full Stack Developer</p>
         </div>
-        <div className="border-b-2 w-76 my-4"></div>
+        <div className="border-b-2 w-74 my-4"></div>
 
         <div>
-          <div className="flex items-center mt-1 text-gray-600">
+          <div className="flex items-center mt-1 text-gray-600 ml-4">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -34,7 +34,7 @@ export const About = () => {
             <span className="ml-2">Mumbai, India</span>
           </div>
 
-          <div className="flex items-center mt-1 text-gray-600">
+          <div className="flex items-center mt-1 text-gray-600 ml-4">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -54,7 +54,7 @@ export const About = () => {
             </a>
           </div>
 
-          <div className="flex items-center mt-2 text-gray-600">
+          <div className="flex items-center mt-2 text-gray-600 ml-4">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -72,7 +72,7 @@ export const About = () => {
             </a>
           </div>
 
-          <div className="flex items-center mt-2 text-gray-600">
+          <div className="flex items-center mt-2 text-gray-600 ml-4">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -95,7 +95,7 @@ export const About = () => {
             </Link>
           </div>
 
-          <div className="flex items-center mt-2 text-gray-600">
+          <div className="flex items-center mt-2 text-gray-600 ml-4">
             <svg
               stroke="currentColor"
               fill="currentColor"

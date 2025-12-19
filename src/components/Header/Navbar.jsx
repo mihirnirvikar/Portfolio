@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <>
-      <nav className="navbar flex items-center mx-10 gap-12 font-medium my-2">
+      <nav className="navbar flex items-center mx-7 gap-12 font-medium my-3">
         <div className="flex items-center gap-1">
           <svg
             stroke="currentColor"
