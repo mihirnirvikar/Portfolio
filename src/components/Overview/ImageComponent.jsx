@@ -11,8 +11,8 @@ export const ImageComponent = ({src, alt, bgc}) => {
   }
   return (
     <>
-      <div className={`${bgMap[bgc]} overflow-hidden w-15 h-15 mt-6 p-1 items-center rounded-xl flex justify-center `} >
-        <img className="w-full" src={src} alt={alt} />
+      <div className={`${bgMap[bgc]} overflow-hidden w-14 h-14 mt-6 p-2 items-center rounded-xl flex justify-center `} >
+        <img className="w-full " src={src} alt={alt} />
       </div>
     </>
   );

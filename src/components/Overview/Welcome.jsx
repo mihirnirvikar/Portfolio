@@ -6,7 +6,7 @@ export const Welcome = () => {
       <p className="text-sm font-semibold">MihirNirvikar / Overview.md</p>
 
       <div>
-        <h1 className="text-2xl font-semibold mt-10 text-[#F75C7E] flex justify-center">
+        <h1 className="text-[28px] font-semibold mt-10 text-[#F75C7E] flex justify-center">
           <span>
             <Typewriter
               words={[

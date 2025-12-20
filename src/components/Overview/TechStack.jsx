@@ -3,7 +3,7 @@ import { ImageComponent } from "./ImageComponent.jsx";
 export const TechStack = () => {
   return (
     <>
-      <div>
+      <div className="ml-2 mb-6">
         <h2 className="text-2xl mb-2 font-medium">💻 Tech Stack</h2>
         <hr />
 
@@ -157,6 +157,15 @@ export const TechStack = () => {
 
             <ImageComponent src="Npm-icon.svg" alt="Npm Image" bgc="gray-300" />
           </div>
+        </div>
+
+        <div className="flex mt-8 px-2">
+          <div className="w-1.25 h-13 bg-[#D0D7DE] mr-2"></div>
+          <p className="text-[#656D76] ml-2">
+            I believe in <em>learning by building</em> — every project here
+            represents my dedication to solving real-world problems through
+            clean code and thoughtful design.
+          </p>
         </div>
       </div>
     </>
