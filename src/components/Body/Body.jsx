@@ -1,11 +1,13 @@
-import { About } from './About.jsx';
-import { Outlet } from 'react-router-dom';
+import { About } from "./About.jsx";
+import { Outlet } from "react-router-dom";
 
 export const Body = () => {
-    return (
-        <div className="flex">
-            <About />
-            <Outlet />
-        </div>
-    )
-}
+  return (
+    <>
+      <div className="flex">
+        <About />
+        <Outlet />
+      </div>
+    </>
+  );
+};

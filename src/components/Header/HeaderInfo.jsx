@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const HeaderInfo = () => {
   return (
     <>
-      <div className="header px-2 py-2 flex items-center justify-between ">
+      <div className="header px-2 pt-2 pb-1 flex items-center justify-between ">
         <div className="header-logo mr-1 flex items-center ">
           <svg
             width="60"

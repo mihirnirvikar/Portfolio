@@ -162,9 +162,7 @@ export const TechStack = () => {
         <div className="flex mt-8 px-2">
           <div className="w-1.25 h-13 bg-[#D0D7DE] mr-2"></div>
           <p className="text-[#656D76] ml-2">
-            I believe in <em>learning by building</em> — every project here
-            represents my dedication to solving real-world problems through
-            clean code and thoughtful design.
+            Continuously exploring new tools, frameworks, and best practices to improve scalability, maintainability, and developer experience.
           </p>
         </div>
       </div>

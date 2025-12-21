@@ -1,11 +1,11 @@
 export const LetsConnect = () => {
   return (
     <>
-      <div className="ml-2 mb-6">
+      <div className="ml-2 mb-10">
         <h1 className="text-2xl mb-2 font-medium ">📬 Let’s Connect</h1>
         <hr />
 
-        <div className="flex w-full mt-6">
+        <div className="flex w-full mt-6 px-2">
           <div className="w-20 h-25 border border-r-0 px-2 py-1">
             <a
               className="flex flex-col items-center "
