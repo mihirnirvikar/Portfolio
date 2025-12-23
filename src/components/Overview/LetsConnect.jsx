@@ -21,7 +21,7 @@ export const LetsConnect = () => {
               className="flex flex-col items-center "
               href="https://github.com/MihirNirvikar"
             >
-              <img className="w-12 h-12" src="Github-icon.svg" alt="Gmail Image" />
+              <img className="w-12 h-12" src="Github-icon.svg" alt="Github Image" />
               <p className="text-sm mt-3 font-semibold text-blue-700">GitHub</p>
             </a>
           </div>
@@ -31,7 +31,7 @@ export const LetsConnect = () => {
               className="flex flex-col items-center "
               href="https://www.linkedin.com/in/mihir-nirvikar/"
             >
-              <img className="w-12 h-12" src="Linkedin-icon.svg" alt="Gmail Image" />
+              <img className="w-12 h-12" src="Linkedin-icon.svg" alt="Linkedin Image" />
               <p className="text-sm mt-3 font-semibold text-blue-700">LinkedIn</p>
             </a>
           </div>
@@ -41,7 +41,7 @@ export const LetsConnect = () => {
               className="flex flex-col items-center "
               href="https://x.com/MihirNirvikar"
             >
-              <img className="w-12 h-12" src="Twitter-icon.svg" alt="Gmail Image" />
+              <img className="w-12 h-12" src="Twitter-icon.svg" alt="Instagram Image" />
               <p className="text-sm mt-3 font-semibold text-blue-700">X</p>
             </a>
           </div>
@@ -53,6 +53,16 @@ export const LetsConnect = () => {
             >
               <img className="w-12 h-12" src="Instagram-icon.svg" alt="Gmail Image" />
               <p className="text-sm mt-3 font-semibold text-blue-700">Instagram</p>
+            </a>
+          </div>
+
+           <div className="w-20 h-25 border px-2 py-3">
+            <a
+              className="flex flex-col items-center "
+              href="https://leetcode.com/u/Man_2004/"
+            >
+              <img className="w-12 h-12" src="Leetcode-icon.svg" alt="Leetcode Image" />
+              <p className="text-sm mt-3 font-semibold text-blue-700">Leetcode</p>
             </a>
           </div>
         </div>

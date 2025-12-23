@@ -1,7 +1,4 @@
 export const Education = () => {
-  return (
-    <>
-      <div>Education</div>
-    </>
-  );
+  return <>
+  <h1>Education Component</h1></>;
 };
