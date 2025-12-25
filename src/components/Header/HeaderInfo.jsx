@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const HeaderInfo = () => {
+  const { theme, setTheme, toggleTheme } = useContext(ThemeContext);
+
+  const themeBtnHandler = () => {
+    toggleTheme();
+  }
+
   return (
     <>
       <div className="header px-2 pt-2 pb-1 flex items-center justify-between ">
@@ -12,20 +20,24 @@ export const HeaderInfo = () => {
             viewBox="0 0 180 110"
             xmlns="http://www.w3.org/2000/svg"
             className=""
+
           >
             <path
-              fill="#0000000"
+              {...theme === "dark" ? { fill: "white" } : { fill: "black" }}
+              
               d="M30 90 V30 C30 26 34 26 36 30 L60 66 L84 30 C86 26 90 26 90 30 V90
           H78 V54 L60 78 L42 54 V90 Z M142 90 V30 C142 26 138 26 136 30 L108 74
           V30 H96 V90 C96 94 100 94 102 90 L130 46 V90 Z"
             />
           </svg>
           {/* <p className="text-xl font-bold mt-0.5">Mihir Nirvikar</p> */}
-          <Link to="/" className="text-xl font-bold mt-0.5">Mihir Nirvikar</Link>
+          <Link to="/" className="text-xl font-bold mt-0.5">
+            Mihir Nirvikar
+          </Link>
         </div>
 
         <div className="header-search-bar flex items-center gap-2 mt-0.5">
-          <button className="border rounded-lg cursor-pointer  h-9.5 w-72 p-2 border-gray-400 flex items-center hover:shadow-md transition-shadow duration-100">
+          <button className="border rounded-lg cursor-pointer  h-9.5 w-72 p-2 border-gray-400 flex items-center hover:shadow-md transition-shadow duration-100 ">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -51,30 +63,55 @@ export const HeaderInfo = () => {
 
           <div className="border h-6 mx-2"></div>
 
-          <button className="theme-toggle cursor-pointer mr-2 p-1.5 rounded-lg hover:bg-gray-200 border transition-colors duration-100">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-sun size-5 transition-colors duration-100"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="4"></circle>
-              <path d="M12 2v2"></path>
-              <path d="M12 20v2"></path>
-              <path d="m4.93 4.93 1.41 1.41"></path>
-              <path d="m17.66 17.66 1.41 1.41"></path>
-              <path d="M2 12h2"></path>
-              <path d="M20 12h2"></path>
-              <path d="m6.34 17.66-1.41 1.41"></path>
-              <path d="m19.07 4.93-1.41 1.41"></path>
-            </svg>
+          <button
+            className="theme-toggle cursor-pointer mr-2 p-1.5 rounded-lg hover:bg-gray-200 border transition-colors duration-100"
+            onClick={themeBtnHandler}
+          >
+            {theme === "dark" ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-sun size-5 transition-colors duration-100"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-moon size-5 transition-colors duration-100"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.985 12.486a9 9 0 1 
+              1-9.473-9.472c.405-.022.617.46.402.803a6 6 0
+               0 0 8.268 8.268c.344-.215.825-.004.803.401"
+                ></path>
+              </svg>
+            )}
           </button>
 
           <button className="theme-toggle mr-6 cursor-pointer p-1.5 rounded-lg hover:bg-gray-200 border transition-colors duration-100">

@@ -1,5 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
+
 import { App } from "./App.jsx";
 import { Body } from "./components/Body/Body.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -53,13 +55,15 @@ const router = createBrowserRouter([
       {
         path: "/projects/nestinn",
         element: <div>Nestinn</div>,
-      }
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );

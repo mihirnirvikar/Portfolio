@@ -5,9 +5,11 @@ import { Navbar } from "./Navbar.jsx";
 export const Header = () => {
   return (
     <>
-      < HeaderInfo />
-      < Navbar />
-      <hr />
+      <div className="bg-white text-black dark:bg-[#010409] dark:text-white">
+        <HeaderInfo />
+        <Navbar />
+        <hr />
+      </div>
     </>
   );
 };
