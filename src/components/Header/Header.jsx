@@ -7,7 +7,7 @@ export const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   return (
     <>
-      <div className="flex-1 flex flex-col justify-center dark:bg-[#010409] bg-[#F6F8FA] h-25 text-black  dark:text-white border-b border-gray-300 dark:border-gray-700">
+      <div className="flex-1 flex flex-col justify-center dark:bg-[#010409] bg-[#F6F8FA] h-25 border-b border-gray-300 dark:border-gray-700">
         <HeaderInfo />
         <div
           className={`${

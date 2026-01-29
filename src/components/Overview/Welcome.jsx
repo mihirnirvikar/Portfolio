@@ -6,7 +6,7 @@ export const Welcome = () => {
       <p className="text-sm font-semibold">MihirNirvikar / Overview.md</p>
 
       <div>
-        <h1 className="text-[28px] font-semibold mt-10 text-[#F75C7E] flex justify-center">
+        <h1 className="text-[36px] font-semibold mt-10 text-[#F75C7E] flex justify-center">
           <span>
             <Typewriter
               words={[
@@ -30,13 +30,13 @@ export const Welcome = () => {
       </div>
 
       <div className="p-2">
-        <h1 className="text-2xl flex justify-center mt-8 mb-2">
+        <h1 className="text-2xl font-semibold flex justify-center mt-8 mb-4">
           Welcome to My Digital Space
         </h1>
-        <hr />
+        <hr className="text-gray-400"/>
 
-        <p className="p-2 leading-7 font-semibold mt-2">
-          Hey there! I'm Mihir Nirvikar, a Full-Stack Developer and recently
+        <p className="px-2 leading-7 mt-4">
+          Hey there! I'm <b>Mihir Nirvikar</b>, a Full-Stack Developer and recently
           graduated student from Yeshwantrao Chavan College of Engineering,
           Nagpur, India. Here, I showcase my experience in creating scalable,
           performance-driven, and user-centric web applications with modern tech
@@ -44,7 +44,7 @@ export const Welcome = () => {
         </p>
 
         <div className="flex mt-4 ml-2">
-          <div className="w-1.25 h-13 bg-[#D0D7DE] mr-2 mb-4"></div>
+          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-32 h-36 mr-2 mb-4 rounded transition-ease-in-out duration-300 bg-gray-500"></div>
           <p className="text-[#656D76] ml-2">
             I believe in <em>learning by building</em> — every project here
             represents my dedication to solving real-world problems through

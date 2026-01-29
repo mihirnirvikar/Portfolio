@@ -8,7 +8,7 @@ export const TechStack = () => {
         <hr />
 
         <div>
-          <h1 className="flex justify-center mt-4 text-2xl font-bold">
+          <h1 className="flex justify-center mt-4 text-2xl font-semibold">
             Frontend
           </h1>
           <div className="flex justify-center gap-2">
@@ -62,7 +62,7 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-bold">
+          <h1 className="flex justify-center mt-8 text-2xl font-semibold">
             Backend
           </h1>
           <div className="flex justify-center gap-2">
@@ -97,7 +97,7 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-bold">
+          <h1 className="flex justify-center mt-8 text-2xl font-semibold">
             Languages
           </h1>
           <div className="flex justify-center gap-2">
@@ -122,7 +122,7 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-bold">
+          <h1 className="flex justify-center mt-8 text-2xl font-semibold">
             Tools & Technologies
           </h1>
           <div className="flex justify-center gap-2">
@@ -160,9 +160,10 @@ export const TechStack = () => {
         </div>
 
         <div className="flex mt-8 px-2">
-          <div className="w-1.25 h-13 bg-[#D0D7DE] mr-2"></div>
+          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-26 h-32 mr-2 mb-4 rounded transition-ease-in-out duration-300 bg-gray-500"></div>
           <p className="text-[#656D76] ml-2">
-            Continuously exploring new tools, frameworks, and best practices to improve scalability, maintainability, and developer experience.
+            Continuously exploring new tools, frameworks, and best practices to
+            improve scalability, maintainability, and developer experience.
           </p>
         </div>
       </div>
