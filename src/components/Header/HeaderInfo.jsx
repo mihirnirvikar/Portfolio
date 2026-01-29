@@ -13,7 +13,7 @@ export const HeaderInfo = () => {
 
   return (
     <>
-      <div className="header px-2 pt-1 flex items-center justify-between ">
+      <div className=" header px-2 pt-1 flex items-center justify-between ">
         <div className="header-logo">
           <Link
             to="/"

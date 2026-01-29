@@ -3,5 +3,29 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    @apply dark:bg-[#0D1117] dark:text-white bg-white text-black;
+  @apply dark:bg-[#0D1117] dark:text-white bg-white text-black;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4); /* slate-400 */
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
 }

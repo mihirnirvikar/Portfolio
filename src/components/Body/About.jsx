@@ -4,7 +4,7 @@ import { MapPin, Mail, Github, Linkedin, Phone } from "lucide-react";
 export const About = () => {
   return (
     <>
-      <div className="w-72 xl:ml-32 lg:ml-24 md:ml-12 sm:ml-2 sm:mr-2 mt-10 mb-10 p-2">
+      <div className="w-72 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-2 sm:mr-2 mt-10 mb-10 p-2 transition-ease-in-out duration-300">
         {/* About Image Container */}
         <div className="items-center text-center">
           <img
