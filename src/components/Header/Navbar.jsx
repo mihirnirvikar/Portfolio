@@ -9,11 +9,28 @@ import {
   FileText,
   MessageSquareMore,
 } from "lucide-react";
+import { useEffect } from "react";
 
-export const Navbar = () => {
+export const Navbar = ({props : setIsFixed}) => {
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar flex items-center justify- font-semibold mt-1 px-6 pb-0.5">
+      <nav className="navbar flex items-center justify- font-semibold px-6 text-[15px]">
         <ul className="flex gap-1 dark:text-[#E4E4E7] text-[#2a2a2c]">
           <NavLink to="/" end>
             {({ isActive }) => (
@@ -25,7 +42,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <BookOpen className="size-5 stroke-2" />
+                  <BookOpen className="size-4 stroke-2" />
                   <span>Overview</span>
                 </div>
               </li>
@@ -42,7 +59,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <FolderKanban className="size-5 stroke-2" />
+                  <FolderKanban className="size-4 stroke-2" />
                   <span>Projects</span>
                 </div>
               </li>
@@ -59,7 +76,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-35 h-8 justify-center transition-ease-in-out duration-200">
-                  <Award className="size-5 stroke-2" />
+                  <Award className="size-4 stroke-2" />
 
                   <span>Achievement</span>
                 </div>
@@ -77,7 +94,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-32 h-8 justify-center transition-ease-in-out duration-200">
-                  <IdCardLanyard className="size-5 stroke-2" />
+                  <IdCardLanyard className="size-4 stroke-2" />
 
                   <span>Experience</span>
                 </div>
@@ -95,7 +112,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <GraduationCap className="size-5 stroke-2" />
+                  <GraduationCap className="size-4 stroke-2" />
 
                   <span>Education</span>
                 </div>
@@ -113,7 +130,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <FileText className="size-5 stroke-2" />
+                  <FileText className="size-4 stroke-2" />
                   <span>Resume</span>
                 </div>
               </li>
@@ -130,7 +147,7 @@ export const Navbar = () => {
                 }`}
               >
                 <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <MessageSquareMore className="size-5 stroke-2" />
+                  <MessageSquareMore className="size-4 stroke-2" />
 
                   <span>Contact</span>
                 </div>
