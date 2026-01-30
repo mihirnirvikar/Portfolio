@@ -5,31 +5,33 @@ export const PinnedProject = () => {
     <>
       <div className="w-full mb-20">
         <h1 className=" text-xl mb-4 font-semibold ">📌 Pinned Projects</h1>
-        <div className="flex gap-4">
+
+        <div className="w-full flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap gap-4 mt-4">
           <ProjectComponent
-            projectName="Project 1"
-            projectDesc="Description"
-            skills="MERN"
+            projectName="Portfolio"
+            projectDesc="A personal portfolio to showcase my skills and projects."
+            skills="React, Tailwind CSS, Framer Motion"
           />
-          <ProjectComponent />
+
+          <ProjectComponent
+            projectName="Portfolio"
+            projectDesc="A personal portfolio to showcase my skills and projects."
+            skills="React, Tailwind CSS, Framer Motion"
+          />
         </div>
 
-        <div className="flex gap-4 mt-4">
+        <div className="w-full flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap gap-4 mt-4">
           <ProjectComponent
-            projectName="Project 1"
-            projectDesc="Description"
-            skills="MERN"
+            projectName="Portfolio"
+            projectDesc="A personal portfolio to showcase my skills and projects."
+            skills="React, Tailwind CSS, Framer Motion"
           />
-          <ProjectComponent />
-        </div>
 
-        <div className="flex gap-4 mt-4">
           <ProjectComponent
-            projectName="Project 1"
-            projectDesc="Description"
-            skills="MERN"
+            projectName="Portfolio"
+            projectDesc="A personal portfolio to showcase my skills and projects."
+            skills="React, Tailwind CSS, Framer Motion"
           />
-          <ProjectComponent />
         </div>
       </div>
     </>

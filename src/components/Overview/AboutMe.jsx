@@ -3,7 +3,7 @@ export const AboutMe = () => {
     <>
       <div className="ml-2 mb-6">
         <h1 className="text-2xl mb-2 font-medium ">🧭 About Me</h1>
-        <hr />
+        <hr className="text-gray-400" />
 
         <ul className="list-disc pl-5 mt-4 ml-2">
           <li>

@@ -30,7 +30,7 @@ export const Navbar = ({props : setIsFixed}) => {
 
   return (
     <>
-      <nav className="navbar flex items-center justify- font-semibold px-6 text-[15px]">
+      <nav className="navbar flex items-center justify- font-semibold px-6 text-[15px] duration-200 transition-ease-in-out">
         <ul className="flex gap-1 dark:text-[#E4E4E7] text-[#2a2a2c]">
           <NavLink to="/" end>
             {({ isActive }) => (

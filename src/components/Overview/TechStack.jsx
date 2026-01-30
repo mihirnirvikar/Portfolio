@@ -5,13 +5,13 @@ export const TechStack = () => {
     <>
       <div className="ml-2 mb-6">
         <h2 className="text-2xl mb-2 font-medium">💻 Tech Stack</h2>
-        <hr />
+        <hr className="text-gray-400" />
 
         <div>
-          <h1 className="flex justify-center mt-4 text-2xl font-semibold">
+          <h1 className="flex justify-center mt-4 text-2xl font-semibold mb-4">
             Frontend
           </h1>
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             <ImageComponent
               src="React-icon.svg"
               alt="React Image"
@@ -62,10 +62,10 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-semibold">
+          <h1 className="flex  justify-center mt-8 text-2xl font-semibold mb-4">
             Backend
           </h1>
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             <ImageComponent
               src="Node-js-icon.svg"
               alt="Node.js Image"
@@ -97,10 +97,10 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-semibold">
+          <h1 className="flex justify-center mt-8 text-2xl font-semibold mb-4">
             Languages
           </h1>
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             <ImageComponent
               src="Java-icon.svg"
               alt="Java Image"
@@ -122,10 +122,10 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-semibold">
+          <h1 className="flex justify-center mt-8 text-2xl font-semibold mb-4">
             Tools & Technologies
           </h1>
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             <ImageComponent src="Git-icon.svg" alt="Git Image" bgc="gray-300" />
             <ImageComponent
               src="Github-icon.svg"
