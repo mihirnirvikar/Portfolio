@@ -3,7 +3,7 @@ export const CurrentFocus = () => {
     <>
       <div className="ml-2 mb-6">
         <h1 className="text-2xl mb-2 font-medium ">🌟 Current Focus</h1>
-        <hr className="text-gray-400" />
+        <hr className="border-[#D4D4D8] dark:border-[#52525C]" />
 
         <div className="px-2 mt-4 text-md ">
           <p className="leading-6 mb-4">

@@ -5,7 +5,7 @@ export const TechStack = () => {
     <>
       <div className="ml-2 mb-6">
         <h2 className="text-2xl mb-2 font-medium">💻 Tech Stack</h2>
-        <hr className="text-gray-400" />
+        <hr className="border-[#D4D4D8] dark:border-[#52525C]" />
 
         <div>
           <h1 className="flex justify-center mt-4 text-2xl font-semibold mb-4">
@@ -160,8 +160,8 @@ export const TechStack = () => {
         </div>
 
         <div className="flex mt-8 px-2">
-          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-26 h-32 mr-2 mb-4 rounded transition-ease-in-out duration-300 bg-gray-500"></div>
-          <p className="text-[#656D76] ml-2">
+          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-26 h-32 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D]"></div>
+          <p className="text-[#656D8C] dark:text-[#848D97] ml-2">
             Continuously exploring new tools, frameworks, and best practices to
             improve scalability, maintainability, and developer experience.
           </p>
