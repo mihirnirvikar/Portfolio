@@ -1,4 +1,4 @@
-export const Achievement = () => {
+export const AchievementPage = () => {
 
   return (
     <>

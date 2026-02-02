@@ -3,15 +3,15 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 import { App } from "./App.jsx";
-import { Body } from "./components/Body/Body.jsx";
+import { BodyPage } from "./layout/BodyPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { Overview } from "./components/Overview/Overview.jsx";
-import { Project } from "./components/Project/Project.jsx";
-import { Achievement } from "./components/Achievement/Achievement.jsx";
-import { Experience } from "./components/Experience/Experience.jsx";
-import { Education } from "./components/Education/Education.jsx";
-import { Contact } from "./components/Contact/Contact.jsx";
-import { Resume } from "./components/Resume/Resume.jsx";
+import { OverviewPage } from "./pages/OverviewPage.jsx";
+import { ProjectPage } from "./pages/ProjectPage.jsx";
+import { AchievementPage } from "./pages/AchievementPage.jsx";
+import { ExperiencePage } from "./pages/ExperiencePage.jsx";
+import { EducationPage } from "./pages/EducationPage.jsx";
+import { ContactPage } from "./pages/ContactPage.jsx";
+import { ResumePage } from "./pages/ResumePage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,35 +20,35 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <BodyPage />,
         children: [
           {
             index: true,
-            element: <Overview />,
+            element: <OverviewPage />,
           },
           {
             path: "/projects",
-            element: <Project />,
+            element: <ProjectPage />,
           },
           {
             path: "/achievements",
-            element: <Achievement />,
+            element: <AchievementPage />,
           },
           {
             path: "/experience",
-            element: <Experience />,
+            element: <ExperiencePage />,
           },
           {
             path: "/educations",
-            element: <Education />,
+            element: <EducationPage />,
           },
           {
             path: "/resume",
-            element: <Resume />,
+            element: <ResumePage />,
           },
           {
             path: "/contact",
-            element: <Contact />,
+            element: <ContactPage />,
           },
         ],
       },
