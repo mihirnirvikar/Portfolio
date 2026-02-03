@@ -56,7 +56,7 @@ export const Filter = ({
 
           <div ref={dropdownRef} className="relative">
             <button
-              className={`h-9 ml-2 px-2 py-1 flex items-center justify-center border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-sm hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31] relative ${isActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900"}`}
+              className={`h-9 ml-2 px-3 py-1 flex items-center justify-center border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-sm hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31] relative ${isActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900"}`}
               onClick={(e) => {
                 setIsActive(!isActive);
                 e.stopPropagation();
