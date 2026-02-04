@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/projects/nestinn",
+        path: "/projects/:slug",
         element: <div>Nestinn</div>,
       },
     ],

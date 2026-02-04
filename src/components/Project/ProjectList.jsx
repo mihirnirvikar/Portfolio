@@ -30,7 +30,7 @@ export const ProjectList = ({
             <p className="text-sm">{techStack}</p>
           </div>
 
-          <div className="flex gap-2 items-center  hover:text-[#39A2FF] text-sm">
+          <div className="flex gap-2 items-center  hover:text-[#39A2FF] text-xs">
             <ExternalLink className="size-4" />
             <a href={externalLink} target="_blank" rel="noreferrer">
               {externalLink}
@@ -38,12 +38,12 @@ export const ProjectList = ({
           </div>
 
           <div className="flex gap-2 items-center justify-center ">
-            <Github className="size-5" />
+            <Github className="size-4" />
             <a
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#D4D4D8] dark:border-[#52525C] px-2 py-0.5 pb-1 text-sm rounded-lg flex items-center justify-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A]"
+              className="border border-[#D4D4D8] dark:border-[#52525C] px-2 py-0.5 pb-1 text-xs rounded-lg flex items-center justify-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A]"
             >
               Code
             </a>

@@ -5,6 +5,7 @@ import { ProjectTitle } from "../components/Project/ProjectTitle";
 export const ProjectPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState("list");
   const [isSelect, setIsSelect] = useState("All");
+  const [search, setSearch] = useState("");
 
   const projects = [
     {
@@ -39,7 +40,7 @@ export const ProjectPage = () => {
     },
 
     {
-      id: 3,
+      id: 4,
       projectName: "Nestinn",
       description: "description My name is mihir",
       techStack: "MERN Stack",
@@ -51,17 +52,26 @@ export const ProjectPage = () => {
   ];
 
   const filteredProjects = projects.filter((item) => {
-    
-    if (isSelect === "All"){
-      return true
-    } 
+    if (isSelect !== "All") {
+      const selected = isSelect.toLowerCase();
 
-    const selected = isSelect.toLowerCase();
+      const hasType = item.type.some((t) => t.toLowerCase() === selected);
 
-    return item.type.some((t) => t.toLowerCase() === selected);
+      if (!hasType) return false;
+    }
+
+    if (search.trim() !== "") {
+      const query = search.toLowerCase();
+
+      const matchesSearch =
+        item.projectName.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query);
+
+      if (!matchesSearch) return false;
+    }
+
+    return true;
   });
-
-  console.log(filteredProjects);
 
   return (
     <>
@@ -72,6 +82,8 @@ export const ProjectPage = () => {
             setIsFilterOpen={setIsFilterOpen}
             isSelect={isSelect}
             setIsSelect={setIsSelect}
+            search={search}
+            setSearch={setSearch}
           />
 
           <div

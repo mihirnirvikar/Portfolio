@@ -6,6 +6,8 @@ export const Filter = ({
   setIsFilterOpen,
   isSelect,
   setIsSelect,
+  search,
+  setSearch,
 }) => {
   const [isActive, setIsActive] = useState(false);
   const dropdownRef = useRef(null);
@@ -30,6 +32,10 @@ export const Filter = ({
           <input
             type="text"
             placeholder="Search project"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
             className="w-full h-full px-3 border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-[14px] focus:outline-none focus:border-2  focus:border-[#39A2FF] dark:text-gray-200 text-gray-800 "
           />
         </div>
@@ -116,7 +122,7 @@ export const Filter = ({
           </div>
         </div>
       </div>
-      
+
       <hr className="mt-4 mb-4 border-[#D4D4D8] dark:border-[#52525C]" />
     </>
   );
