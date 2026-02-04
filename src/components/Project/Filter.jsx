@@ -54,9 +54,9 @@ export const Filter = ({
             <List className="size-5 stroke-3" />
           </button>
 
-          <div ref={dropdownRef} className="relative">
+          <div ref={dropdownRef} className="">
             <button
-              className={`h-9 ml-2 px-3 py-1 flex items-center justify-center border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-sm hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31] relative ${isActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900"}`}
+              className={`h-9 ml-2 z-20 px-3 py-1 flex items-center justify-center border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-sm hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31] ${isActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900 "}`}
               onClick={(e) => {
                 setIsActive(!isActive);
                 e.stopPropagation();
@@ -68,7 +68,7 @@ export const Filter = ({
 
             {isActive && (
               <div
-                className={`mt-1 ml-2 absolute z-10 w-26 rounded-lg flex flex-col gap-1  justify-center items-center border border-[#D4D4D8] dark:border-[#52525C] ${isActive ? "dark:bg-zinc-800 bg-white " : ""}`}
+                className={`mt-1 ml-2 w-26  absolute rounded-lg flex flex-col gap-1 justify-center items-center border border-[#D4D4D8] dark:border-[#52525C] ${isActive ? "dark:bg-zinc-800 bg-white " : ""}`}
               >
                 <span className="text-[10px] text-gray-400">
                   Select TechStack
@@ -116,7 +116,7 @@ export const Filter = ({
           </div>
         </div>
       </div>
-
+      
       <hr className="mt-4 mb-4 border-[#D4D4D8] dark:border-[#52525C]" />
     </>
   );

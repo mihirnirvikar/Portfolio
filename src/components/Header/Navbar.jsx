@@ -11,26 +11,34 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 
-export const Navbar = ({props : setIsFixed}) => {
-  
+export const Navbar = ({ setIsFixed }) => {
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 80) {
+  //       setIsFixed(true);
+  //     } else {
+  //       setIsFixed(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
+      setIsFixed(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setIsFixed]);
 
   return (
     <>
-      <nav className="navbar flex items-center justify- font-semibold px-6 text-[15px] duration-200 transition-ease-in-out">
+      <nav className="navbar flex items-center justify- font-semibold px-6 text-[15px] duration-200 transition-ease-in-out sticky top-0 z-50">
         <ul className="flex gap-1 dark:text-[#E4E4E7] text-[#2a2a2c]">
           <NavLink to="/" end>
             {({ isActive }) => (

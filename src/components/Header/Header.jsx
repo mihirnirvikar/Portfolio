@@ -7,7 +7,7 @@ export const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   return (
     <>
-      <div className="flex-1 flex flex-col justify-center dark:bg-[#010409] bg-[#F6F8FA] h-25 border-b border-gray-300 dark:border-gray-700">
+      <div className="flex-1 flex flex-col justify-center dark:bg-[#010409] bg-[#F6F8FA] h-25 border-b border-gray-300 dark:border-gray-700 z-1 relative">
         <HeaderInfo />
         <div
           className={`${
@@ -16,7 +16,7 @@ export const Header = () => {
               : "relative"
           } transition-all duration-300`}
         >
-          <Navbar props={setIsFixed} />
+          <Navbar setIsFixed={setIsFixed} />
         </div>
       </div>
     </>
