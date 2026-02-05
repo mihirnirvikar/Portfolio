@@ -1,6 +1,11 @@
 import { Filter } from "../components/Project/Filter";
 import { useState } from "react";
 import { ProjectTitle } from "../components/Project/ProjectTitle";
+import {
+  Nestinn,
+  PurpleGPT,
+  PurpleGPT1,
+} from "../assets/projectImages";
 
 export const ProjectPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState("list");
@@ -15,7 +20,7 @@ export const ProjectPage = () => {
       techStack: "MERN Stack",
       externalLink: "https://nestinn-production.up.railway.app/listings",
       github: "https://github.com/mihirnirvikar/nestinn",
-      projectImage: "/project/Nestinn.png",
+      projectImage: Nestinn,
       type: ["fullstack", "frontend", "backend"],
     },
     {
@@ -25,7 +30,7 @@ export const ProjectPage = () => {
       techStack: "MERN Stack",
       externalLink: "https://purplegpt.netlify.app/",
       github: "https://github.com/mihirnirvikar/PurpleGPT",
-      projectImage: "/project/PurpleGPT1.png",
+      projectImage: PurpleGPT1,
       type: ["fullstack", "frontend", "backend"],
     },
     {
@@ -35,7 +40,7 @@ export const ProjectPage = () => {
       techStack: "MERN Stack",
       externalLink: "https://github.com/mihirnirvikar/nestinn",
       github: "https://github.com/mihirnirvikar/nestinn",
-      projectImage: "/project/Nestinn.png",
+      projectImage: Nestinn,
       type: ["backend"],
     },
 
@@ -46,7 +51,7 @@ export const ProjectPage = () => {
       techStack: "MERN Stack",
       externalLink: "https://github.com/mihirnirvikar/nestinn",
       github: "https://github.com/mihirnirvikar/nestinn",
-      projectImage: "/project/Nestinn.png",
+      projectImage: Nestinn,
       type: ["frontend"],
     },
   ];

@@ -1,3 +1,12 @@
+import {
+  GithubImage,
+  LinkedinImage,
+  InstagramImage,
+  TwitterImage,
+  GmailImage,
+  LeetcodeImage,
+} from "../../assets/socialImages";
+
 export const LetsConnect = () => {
   return (
     <>
@@ -10,12 +19,10 @@ export const LetsConnect = () => {
             <a
               className="flex flex-col items-center hover:text-[#39A2FF]"
               href="mailto:mihirnikar@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                className="w-14 h-14"
-                src="Gmail-icon.svg"
-                alt="Gmail Image"
-              />
+              <img className="w-14 h-14" src={GmailImage} alt="Gmail Image" />
               <p className=" mt-1 font-semibold ">Email</p>
             </a>
           </div>
@@ -24,10 +31,12 @@ export const LetsConnect = () => {
             <a
               className="flex flex-col items-center hover:text-[#39A2FF]"
               href="https://github.com/MihirNirvikar"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="w-10 h-10 dark:bg-gray-300  bg-clip rounded-full"
-                src="Github-icon.svg"
+                src={GithubImage}
                 alt="Github Image"
               />
               <p className=" mt-3 font-semibold ">GitHub</p>
@@ -38,10 +47,12 @@ export const LetsConnect = () => {
             <a
               className="flex flex-col items-center hover:text-[#39A2FF]"
               href="https://www.linkedin.com/in/mihir-nirvikar/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="w-10 h-10"
-                src="Linkedin-icon.svg"
+                src={LinkedinImage}
                 alt="Linkedin Image"
               />
               <p className=" mt-3 font-semibold ">LinkedIn</p>
@@ -52,11 +63,13 @@ export const LetsConnect = () => {
             <a
               className="flex flex-col items-center hover:text-[#39A2FF]"
               href="https://x.com/MihirNirvikar"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="w-10 h-10"
-                src="Twitter-icon.svg"
-                alt="Instagram Image"
+                src={TwitterImage}
+                alt="Twitter Image"
               />
               <p className=" mt-3 font-semibold ">X</p>
             </a>
@@ -66,11 +79,13 @@ export const LetsConnect = () => {
             <a
               className="flex flex-col items-center hover:text-[#39A2FF]"
               href="https://instagram.com/mihirnirvikar"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="w-10 h-10"
-                src="Instagram-icon.svg"
-                alt="Gmail Image"
+                src={InstagramImage}
+                alt="Instagram Image"
               />
               <p className=" mt-3 font-semibold ">Instagram</p>
             </a>
@@ -80,10 +95,12 @@ export const LetsConnect = () => {
             <a
               className="flex flex-col items-center hover:text-[#39A2FF]"
               href="https://leetcode.com/u/Man_2004/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="w-10 h-10"
-                src="Leetcode-icon.svg"
+                src={LeetcodeImage}
                 alt="Leetcode Image"
               />
               <p className=" mt-3 font-semibold ">Leetcode</p>

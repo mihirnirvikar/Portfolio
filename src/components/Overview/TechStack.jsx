@@ -1,4 +1,30 @@
 import { ImageComponent } from "./ImageComponent.jsx";
+import {
+  BootStrapImage,
+  CSS3Image,
+  EjsImage,
+  ExpressjsImage,
+  GitImage,
+  GithubImage,
+  HoppscotchImage,
+  HTML5Image,
+  JavaImage,
+  JavascriptImage,
+  MaterialUiImage,
+  MongoDBImage,
+  MySQLImage,
+  SqlImage,
+  NetlifyImage,
+  NodejsImage,
+  PostmanImage,
+  PythonImage,
+  ReactImage,
+  ReduxImage,
+  NpmImage,
+  TailwindCSSImage,
+  VercelImage,
+  VsCodeImage,
+} from "../../assets/iconsImages.js";
 
 export const TechStack = () => {
   return (
@@ -12,52 +38,40 @@ export const TechStack = () => {
             Frontend
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
-            <ImageComponent
-              src="React-icon.svg"
-              alt="React Image"
-              bgc="gray-800"
-            />
+            <ImageComponent src={ReactImage} alt="React Image" bgc="gray-800" />
 
             <ImageComponent
-              src="Javascript-icon.svg"
+              src={JavascriptImage}
               alt="JavaScript Image"
               bgc="yellow-300"
             />
 
             <ImageComponent
-              src="HTML5-icon.svg"
+              src={HTML5Image}
               alt="HTML5 Image"
               bgc="orange-400"
             />
 
-            <ImageComponent
-              src="CSS3-icon.svg"
-              alt="CSS3 Image"
-              bgc="blue-400"
-            />
+            <ImageComponent src={CSS3Image} alt="CSS3 Image" bgc="blue-400" />
 
             <ImageComponent
-              src="Tailwind_CSS-icon.svg"
+              src={TailwindCSSImage}
               alt="Tailwind CSS Image"
               bgc="gray-800"
             />
             <ImageComponent
-              src="Bootstrap-icon.svg"
+              src={BootStrapImage}
               alt="Bootstrap Image"
               bgc="gray-200"
             />
 
             <ImageComponent
-              src="Material-ui-icon.svg"
+              src={MaterialUiImage}
               alt="Material UI Image"
               bgc="gray-800"
             />
 
-            <ImageComponent
-              src="Redux-icon.svg"
-              alt="Redux Image"
-              bgc="gray-200"
-            />
+            <ImageComponent src={ReduxImage} alt="Redux Image" bgc="gray-200" />
           </div>
         </div>
 
@@ -67,29 +81,27 @@ export const TechStack = () => {
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
             <ImageComponent
-              src="Node-js-icon.svg"
+              src={NodejsImage}
               alt="Node.js Image"
               bgc="gray-200"
             />
             <ImageComponent
-              src="Expressjs-icon.svg"
+              src={ExpressjsImage}
               alt="Express.js Image"
               bgc="gray-200"
             />
             <ImageComponent
-              src="Mongodb-icon.svg"
+              src={MongoDBImage}
               alt="MongoDB Image"
               bgc="gray-200"
             />
 
+            <ImageComponent src={MySQLImage} alt="MySql Image" bgc="gray-200" />
+
+            <ImageComponent src={EjsImage} alt="EJS Image" bgc="gray-200" />
+
             <ImageComponent
-              src="Mysql-icon.svg"
-              alt="MySql Image"
-              bgc="gray-200"
-            />
-            <ImageComponent src="Ejs-icon.svg" alt="EJS Image" bgc="gray-200" />
-            <ImageComponent
-              src="Postman-icon.svg"
+              src={PostmanImage}
               alt="Postman Image"
               bgc="gray-200"
             />
@@ -101,23 +113,19 @@ export const TechStack = () => {
             Languages
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
-            <ImageComponent
-              src="Java-icon.svg"
-              alt="Java Image"
-              bgc="gray-300"
-            />
+            <ImageComponent src={JavaImage} alt="Java Image" bgc="gray-300" />
             <ImageComponent
               src="Python-icon.svg"
               alt="Python Image"
               bgc="gray-300"
             />
             <ImageComponent
-              src="Javascript-icon.svg"
+              src={JavascriptImage}
               alt="JavaScript Image"
               bgc="yellow-300"
             />
 
-            <ImageComponent src="Sql-icon.svg" alt="SQL Image" bgc="gray-300" />
+            <ImageComponent src={SqlImage} alt="SQL Image" bgc="gray-300" />
           </div>
         </div>
 
@@ -126,36 +134,37 @@ export const TechStack = () => {
             Tools & Technologies
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
-            <ImageComponent src="Git-icon.svg" alt="Git Image" bgc="gray-300" />
+            <ImageComponent src={GitImage} alt="Git Image" bgc="gray-300" />
+
             <ImageComponent
-              src="Github-icon.svg"
+              src={GithubImage}
               alt="Github Image"
               bgc="gray-300"
             />
             <ImageComponent
-              src="Vs-code-icon.svg"
+              src={VsCodeImage}
               alt="Vs Code Image"
               bgc="gray-300"
             />
 
             <ImageComponent
-              src="Hoppscotch-icon.svg"
+              src={HoppscotchImage}
               alt="Hoppscotch Image"
               bgc="gray-300"
             />
             <ImageComponent
-              src="Vercel-icon.svg"
+              src={VercelImage}
               alt="Vercel Image"
               bgc="gray-300"
             />
 
             <ImageComponent
-              src="Netlify-icon.svg"
+              src={NetlifyImage}
               alt="Netlify Image"
               bgc="gray-300"
             />
 
-            <ImageComponent src="Npm-icon.svg" alt="Npm Image" bgc="gray-300" />
+            <ImageComponent src={NpmImage} alt="Npm Image" bgc="gray-300" />
           </div>
         </div>
 
