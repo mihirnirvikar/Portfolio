@@ -1,4 +1,4 @@
-import BootStrapImage from "./icons/BootStrap-icon.svg";
+import BootStrapImage from "./icons/Bootstrap-icon.svg";
 import CSS3Image from "./icons/CSS3-icon.svg";
 import EjsImage from "./icons/Ejs-icon.svg";
 import ExpressjsImage from "./icons/Expressjs-icon.svg";
