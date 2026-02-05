@@ -1,6 +1,6 @@
 import { ImageComponent } from "./ImageComponent.jsx";
 import {
-  BootStrapImage,
+  BootstrapImage,
   CSS3Image,
   EjsImage,
   ExpressjsImage,
@@ -60,7 +60,7 @@ export const TechStack = () => {
               bgc="gray-800"
             />
             <ImageComponent
-              src={BootStrapImage}
+              src={BootstrapImage}
               alt="Bootstrap Image"
               bgc="gray-200"
             />

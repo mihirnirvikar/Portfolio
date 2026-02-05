@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/projects/:slug",
-        element: <div>Nestinn</div>,
+        element: <div>children of projects</div>,
       },
     ],
   },

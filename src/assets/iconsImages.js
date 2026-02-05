@@ -1,4 +1,4 @@
-import BootStrapImage from "./icons/Bootstrap-icon.svg";
+import BootstrapImage from "./icons/Bootstrap-icon.svg";
 import CSS3Image from "./icons/CSS3-icon.svg";
 import EjsImage from "./icons/Ejs-icon.svg";
 import ExpressjsImage from "./icons/Expressjs-icon.svg";
@@ -24,7 +24,7 @@ import VercelImage from "./icons/Vercel-icon.svg";
 import VsCodeImage from "./icons/VsCode-icon.svg";
 
 export {
-  BootStrapImage,
+  BootstrapImage,
   CSS3Image,
   EjsImage,
   ExpressjsImage,
