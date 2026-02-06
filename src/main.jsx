@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 import { App } from "./App.jsx";
 import { BodyPage } from "./layout/BodyPage.jsx";
@@ -62,8 +63,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <TooltipProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </TooltipProvider>
   </StrictMode>,
 );

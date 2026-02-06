@@ -56,7 +56,7 @@ export const TechStack = () => {
 
             <ImageComponent
               src={TailwindCSSImage}
-              alt="Tailwind CSS Image"
+              alt="Tailwind-CSS Image"
               bgc="gray-800"
             />
             <ImageComponent
@@ -67,7 +67,7 @@ export const TechStack = () => {
 
             <ImageComponent
               src={MaterialUiImage}
-              alt="Material UI Image"
+              alt="Material-UI Image"
               bgc="gray-800"
             />
 
@@ -115,7 +115,7 @@ export const TechStack = () => {
           <div className="flex flex-wrap justify-center gap-2">
             <ImageComponent src={JavaImage} alt="Java Image" bgc="gray-300" />
             <ImageComponent
-              src="Python-icon.svg"
+              src={PythonImage}
               alt="Python Image"
               bgc="gray-300"
             />
@@ -143,7 +143,7 @@ export const TechStack = () => {
             />
             <ImageComponent
               src={VsCodeImage}
-              alt="Vs Code Image"
+              alt="Vs-Code Image"
               bgc="gray-300"
             />
 
