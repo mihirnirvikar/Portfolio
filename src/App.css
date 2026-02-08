@@ -2,6 +2,8 @@
 
 @plugin "tailwindcss-animate";
 
+@import 'react-photo-view/dist/react-photo-view.css';
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {

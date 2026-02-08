@@ -49,7 +49,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 h-8 justify-center transition-ease-in-out duration-200">
                   <BookOpen className="size-4 stroke-2" />
                   <span>Overview</span>
                 </div>
@@ -66,7 +66,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 h-8 justify-center transition-ease-in-out duration-200">
                   <FolderKanban className="size-4 stroke-2" />
                   <span>Projects</span>
                 </div>
@@ -83,7 +83,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-35 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-35 h-8 justify-center transition-ease-in-out duration-200">
                   <Award className="size-4 stroke-2" />
 
                   <span>Achievement</span>
@@ -101,7 +101,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-32 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-32 h-8 justify-center transition-ease-in-out duration-200">
                   <IdCardLanyard className="size-4 stroke-2" />
 
                   <span>Experience</span>
@@ -119,7 +119,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 h-8 justify-center transition-ease-in-out duration-200">
                   <GraduationCap className="size-4 stroke-2" />
 
                   <span>Education</span>
@@ -137,7 +137,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 h-8 justify-center transition-ease-in-out duration-200">
                   <FileText className="size-4 stroke-2" />
                   <span>Resume</span>
                 </div>
@@ -154,7 +154,7 @@ export const Navbar = ({ setIsFixed }) => {
                     : "font-normal"
                 }`}
               >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-md w-28 h-8 justify-center transition-ease-in-out duration-200">
+                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 h-8 justify-center transition-ease-in-out duration-200">
                   <MessageSquareMore className="size-4 stroke-2" />
 
                   <span>Contact</span>

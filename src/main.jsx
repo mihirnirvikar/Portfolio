@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { PhotoProvider } from "react-photo-view";
 
 import { App } from "./App.jsx";
 import { BodyPage } from "./layout/BodyPage.jsx";
@@ -63,10 +64,17 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <TooltipProvider>
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </TooltipProvider>
+    <PhotoProvider
+      speed={() => 800}
+      maskColor="black"
+      maskOpacity={0.8}
+      loop={true}
+    >
+      <TooltipProvider>
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </TooltipProvider>
+    </PhotoProvider>
   </StrictMode>,
 );

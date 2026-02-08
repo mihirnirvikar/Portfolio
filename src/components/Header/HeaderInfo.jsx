@@ -50,7 +50,7 @@ export const HeaderInfo = () => {
 
           <div className="flex gap-2">
             <button
-              className="theme-toggle cursor-pointer h-8.5 w-8.5 flex justify-center items-center rounded-lg border-[#D4D4D8] dark:border-[#52525C] hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] border transition-colors duration-100"
+              className="theme-toggle cursor-pointer h-8.5 w-8.5 flex justify-center items-center rounded-md border-[#D4D4D8] dark:border-[#52525C] hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] border transition-colors duration-100"
               onClick={themeBtnHandler}
             >
               {theme === "dark" ? (
@@ -60,7 +60,7 @@ export const HeaderInfo = () => {
               )}
             </button>
 
-            <button className="theme-toggle cursor-pointer p-1.5 rounded-lg hover:bg-gray-200 border border-[#D4D4D8] dark:border-[#52525C] dark:hover:bg-[#27272A] transition-colors duration-100">
+            <button className="theme-toggle cursor-pointer p-1.5 rounded-md hover:bg-gray-200 border border-[#D4D4D8] dark:border-[#52525C] dark:hover:bg-[#27272A] transition-colors duration-100">
               <Menu className="size-5 " />
             </button>
           </div>

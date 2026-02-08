@@ -10,7 +10,7 @@ import {
 export const LetsConnect = () => {
   return (
     <>
-      <div className="ml-2 mb-40">
+      <div className="px-2 mb-40">
         <h1 className="text-2xl mb-2 font-medium ">📬 Let’s Connect</h1>
         <hr className="border-[#D4D4D8] dark:border-[#52525C]" />
 

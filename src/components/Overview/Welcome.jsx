@@ -3,10 +3,13 @@ import { Typewriter } from "react-simple-typewriter";
 export const Welcome = () => {
   return (
     <>
-      <p className="text-sm font-semibold">MihirNirvikar / Overview.md</p>
+      <p className="text-[13px]">
+        MihirNirvikar<span className="text-gray-500">/</span>Overview
+        <span className="text-gray-500">.md</span>
+      </p>
 
       <div>
-        <h1 className="text-[36px] font-semibold mt-10 text-[#F75C7E] flex justify-center">
+        <h1 className="text-2xl mt-10 text-[#F75C7E] flex justify-center">
           <span>
             <Typewriter
               words={[
@@ -30,7 +33,7 @@ export const Welcome = () => {
       </div>
 
       <div className="p-2">
-        <h1 className="text-2xl font-semibold flex justify-center mt-8 mb-4">
+        <h1 className="text-2xl font-semibold flex justify-center mt-8 mb-2">
           Welcome to My Digital Space
         </h1>
         <hr className="border-[#D4D4D8] dark:border-[#52525C]" />
@@ -44,7 +47,7 @@ export const Welcome = () => {
         </p>
 
         <div className="flex mt-4 ml-2">
-          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-32 h-36 mr-2 mb-4  transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D]"></div>
+          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-32 h-36 mr-2 mb-4  transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded"></div>
           <p className="text-[#656D8C] dark:text-[#848D97] ml-2">
             I believe in <em>learning by building</em> — every project here
             represents my dedication to solving real-world problems through

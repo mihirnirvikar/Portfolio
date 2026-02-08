@@ -43,13 +43,13 @@ export const ProjectList = ({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#D4D4D8] dark:border-[#52525C] px-2 py-0.5 pb-1 text-xs rounded-lg flex items-center justify-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A]"
+              className="border border-[#D4D4D8] dark:border-[#52525C] px-2 py-1 pb-1 text-xs rounded-md flex items-center justify-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A]"
             >
               Code
             </a>
           </div>
         </div>
-        <hr className="mt-4 mb-4 border-[#D4D4D8] dark:border-[#52525C]" />
+        <hr className="mt-2 mb-4 border-[#D4D4D8] dark:border-[#52525C]" />
       </div>
     </>
   );

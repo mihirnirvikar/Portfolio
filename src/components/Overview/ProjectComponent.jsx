@@ -8,15 +8,15 @@ export const ProjectComponent = ({ projectName, projectDesc, skills }) => {
         {/* Project Name */}
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Bookmark className="size-4" />
-            <p className="ml-1 text-[#39A2FF] font-semibold">{projectName}</p>
+            <Bookmark className="size-4 dark:text-[#E4E4E7] text-[#3F3F46]" />
+            <p className="ml-1 text-[#39A2FF] font-semibold hover:underline">{projectName}</p>
           </div>
 
           <PublicBadge />
         </div>
 
         {/* Description */}
-        <div className="text-sm mt-2 leading-5 flex-1 min-h-0 max-h-40 overflow-y-auto">
+        <div className="text-sm mt-2 leading-5 flex-1 min-h-0 max-h-24 overflow-y-auto no-scrollbar scroll-smooth">
           <p>
             {projectDesc} Lorem ipsum dolor sit, amet consectetur adipisicing
             elit. Placeat nemo natus deleniti deserunt iusto, illum, vero itaque
