@@ -4,7 +4,7 @@ import { MapPin, Mail, Github, Linkedin, Phone } from "lucide-react";
 export const About = () => {
   return (
     <>
-      <div className="xl:w-76 xl:h-76 lg:w-76 lg:h-76 md:w-64 md:h-64 w-full h-full 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-2 px-2 md:mt-10 md:mb-10 mt-6 mb-4 transition-ease-in-out duration-300">
+      <div className="xl:w-76 xl:h-76 lg:w-76 lg:h-76 md:w-64 md:h-64 w-full h-full 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-4 px-4 sm:p-0 md:mt-10 md:mb-10 mt-6 mb-4 transition-ease-in-out duration-300">
         {/* About Image Container */}
         <div className="flex flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-row gap-4 md:gap-2 items-center text-start md:text-center overflow-hidden">
           <img
@@ -24,7 +24,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <p className="mt-4 text-[16px] text-start ml-2">
+        <p className="mt-4 text-[16px] text-start ml-6">
           🌱 Learning, building, and growing - one project at a time.
         </p>
 

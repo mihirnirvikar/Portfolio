@@ -9,7 +9,7 @@ export const Welcome = () => {
       </p>
 
       <div>
-        <h1 className="text-2xl mt-10 text-[#F75C7E] flex justify-center">
+        <h1 className="text-2xl md:text-3xl mt-10 text-[#F75C7E] flex justify-center">
           <span>
             <Typewriter
               words={[
@@ -46,8 +46,8 @@ export const Welcome = () => {
           modern tech stacks.
         </p>
 
-        <div className="flex mt-4 ml-2">
-          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-32 h-36 mr-2 mb-4  transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded"></div>
+        <div className="flex mt-4 ml-2 w-full">
+          <div className="w-1.5 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded xl:h-13 lg:h-13 md:h-18 sm:h-13 h-24 "></div>
           <p className="text-[#656D8C] dark:text-[#848D97] ml-2">
             I believe in <em>learning by building</em> — every project here
             represents my dedication to solving real-world problems through

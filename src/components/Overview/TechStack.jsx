@@ -169,7 +169,7 @@ export const TechStack = () => {
         </div>
 
         <div className="flex mt-8 px-2">
-          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-26 h-32 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded"></div>
+          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-13 h-22 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded"></div>
           <p className="text-[#656D8C] dark:text-[#848D97] ml-2">
             Continuously exploring new tools, frameworks, and best practices to
             improve scalability, maintainability, and developer experience.

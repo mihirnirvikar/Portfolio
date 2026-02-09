@@ -11,7 +11,7 @@ export const Filter = ({
 }) => {
   const [isActive, setIsActive] = useState(false);
   const dropdownRef = useRef(null);
-  
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {

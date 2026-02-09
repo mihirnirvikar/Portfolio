@@ -24,7 +24,7 @@ export const ProjectList = ({
         <div className=" leading-5">{description}</div>
 
         {/* Links */}
-        <div className="mt-4 flex gap-8 items-center ">
+        <div className="mt-4 flex gap-2 flex-col md:flex-col md:gap-2 sm:flex-row sm:gap-6 lg:flex-row lg:gap-8 transition-ease-in-out duration-200">
           <div className="flex gap-2 items-center">
             <Layers className="size-4 text-[#39A2FF]" />
             <p className="text-sm">{techStack}</p>
@@ -37,7 +37,7 @@ export const ProjectList = ({
             </a>
           </div>
 
-          <div className="flex gap-2 items-center justify-center ">
+          <div className="flex gap-2 items-center  ">
             <Github className="size-4" />
             <a
               href={github}
