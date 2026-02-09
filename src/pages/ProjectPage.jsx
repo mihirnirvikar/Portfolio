@@ -80,7 +80,7 @@ export const ProjectPage = () => {
 
   return (
     <>
-      <div className="min-w-sm max-w-4xl flex-1 2xl:mr-32 xl:mr-12 lg:mr-8 md:mr-4 sm:mr-4 mr-4 xl:ml-8 lg:ml-4 md:ml-4 sm:ml-4 ml-4 transition-ease-in-out duration-300 dark:text-[#E4E4E7] text-[#2a2a2c]">
+      <div className="min-w-0 max-w-4xl flex-1 2xl:mr-32 xl:mr-12 lg:mr-8 md:mr-4 sm:mr-4 mr-2 xl:ml-8 lg:ml-4 md:ml-4 sm:ml-4 ml-2 transition-ease-in-out duration-300 dark:text-[#E4E4E7] text-[#2a2a2c]">
         <div className="project-container mt-1 md:mt-4 w-full py-3 rounded-lg mb-10 ">
           <Filter
             isFilterOpen={isFilterOpen}

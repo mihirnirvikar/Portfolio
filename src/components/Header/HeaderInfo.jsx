@@ -32,7 +32,7 @@ export const HeaderInfo = () => {
         <div className="header-search-bar flex items-center gap-2 sm:gap-4 dark:text-[#E4E4E7] text-[#3F3F46]">
           {/* Search bar */}
 
-            <button className="border rounded-md cursor-pointer h-9 w-54 sm:w-64 md:w-72 border-[#D4D4D8] dark:border-[#52525C] flex  items-center text-center hover:shadow-md hover:bg-gray-200 transition-shadow dark:hover:bg-[#27272A] dark:bg-[#010409] bg-white duration-100 gap-4">
+            <button className="border rounded-md cursor-pointer h-9 w-52 sm:w-64 md:w-72 border-[#D4D4D8] dark:border-[#52525C] flex  items-center text-center hover:shadow-md hover:bg-gray-200 transition-shadow dark:hover:bg-[#27272A] dark:bg-[#010409] bg-white duration-100 gap-2 sm:gap-4">
               <Search className="size-5 ml-2 sm:ml-4" />
 
               <p className="justify-center items-center  text-[14px] gap-1 ">

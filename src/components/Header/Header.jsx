@@ -20,7 +20,7 @@ export const Header = () => {
         </div>
       </div> */}
 
-      <div className="flex-1 flex flex-col justify-center dark:bg-[#010409] bg-[#F6F8FA] h-25 border-b border-gray-300 dark:border-gray-700 z-1 relative min-w-sm max-w-full">
+      <div className="flex-1 flex flex-col justify-center dark:bg-[#010409] bg-[#F6F8FA] h-25 border-b border-gray-300 dark:border-gray-700 z-1 relative min-w-0 max-w-full">
         <HeaderInfo />
         <div
           className={`${

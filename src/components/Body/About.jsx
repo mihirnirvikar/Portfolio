@@ -8,7 +8,7 @@ export const About = () => {
         {/* About Image Container */}
         <div className="flex flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-row gap-4 md:gap-2 items-center text-start md:text-center overflow-hidden">
           <img
-            className="lg:w-72 lg:h-72 md:w-60 md:h-60 w-30 h-30 rounded-full object-cover"
+            className="lg:w-72 lg:h-72 md:w-60 md:h-60 sm:w-36 sm:h-36 w-24 h-24 rounded-full object-cover transition-ease-in-out duration-300"
             src={
               "/icon_mihir.jpg" ||
               "https://images.rawpixel.com/image_png_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMl9ibGFja19mbGF0X3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2Zfc2V0X29mXzRfc183YWRhN2I5MC1iNDFhLTQwZmYtYWQxOC04MWNmZjQ4NWFlM2QtbTN3dXc4c3MucG5n.png"
