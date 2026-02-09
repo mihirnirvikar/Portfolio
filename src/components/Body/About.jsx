@@ -6,10 +6,13 @@ export const About = () => {
     <>
       <div className="w-72 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-2 sm:mr-2 mt-10 mb-10 p-2 transition-ease-in-out duration-300">
         {/* About Image Container */}
-        <div className="items-center text-center">
+        <div className="items-center text-center overflow-hidden">
           <img
-            className="w-72 h-68 rounded-full"
-            src="https://images.rawpixel.com/image_png_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMl9ibGFja19mbGF0X3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2Zfc2V0X29mXzRfc183YWRhN2I5MC1iNDFhLTQwZmYtYWQxOC04MWNmZjQ4NWFlM2QtbTN3dXc4c3MucG5n.png"
+            className="w-72 h-68 rounded-full object-cover"
+            src={
+              "/icon_mihir.jpg" ||
+              "https://images.rawpixel.com/image_png_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsX29mZmljZV8zMl9ibGFja19mbGF0X3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2Zfc2V0X29mXzRfc183YWRhN2I5MC1iNDFhLTQwZmYtYWQxOC04MWNmZjQ4NWFlM2QtbTN3dXc4c3MucG5n.png"
+            }
             alt="Mihir Nirvikar Image"
           />
           <p className="mt-4 text-2xl font-semibold">Mihir Nirvikar</p>

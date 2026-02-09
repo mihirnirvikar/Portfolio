@@ -1,20 +1,25 @@
+import { ycce, lbsv, zphs } from "../../assets/educationImages.js";
+
 export const TimelinePreview = () => {
   const items = [
     {
       title: "Yeshwantrao Chavan College of Engineering, Nagpur",
       year: "( 2021 - 2025 )",
+      src: ycce,
       subtitle: "Electronics and Telecommunication Engineering",
       description: "CGPA: 8.12 (out of 10)",
     },
     {
       title: "Lal Bahadur Shastri Junior College, Bhandara",
       year: "( 2019 - 2021 )",
+      src: lbsv,
       subtitle: "Science",
       description: "Percentage: 74% (out of 100%)",
     },
     {
       title: "Z. P. Highschool, Mohadi",
       year: "( 2013 - 2019 )",
+      src: zphs,
       subtitle: "Science",
       description: "Percentage: 81.40% (out of 100%)",
     },
@@ -36,16 +41,17 @@ export const TimelinePreview = () => {
               <div className="w-full h-auto ml-10 border rounded-lg p-6 border-[#D4D4D8] dark:border-[#52525C] dark:text-[#E4E4E7] text-[#3F3F46] flex justify-between gap-4 items-center">
                 <div className="w-25 h-25 border overflow-hidden rounded-xl">
                   <img
-                    src={"/logo2.svg"}
+                    src={item.src}
                     alt=""
                     className="w-full h-full hover:scale-105 transition-ease-in-out duration-300 object-contain"
                   />
                 </div>
                 <div className="flex-1">
-                  <div className="flex text-orange-500 items-center justify-between">
-                    <h3 className="xl:text-xl lg:text-xl md:text-lg sm:text-lg text-md font-semibold ">
+                  <div className="flex  items-center justify-between">
+                    <h3 className="xl:text-xl lg:text-xl md:text-lg sm:text-lg text-md font-semibold text-orange-500">
                       {item.title}
                     </h3>
+
                     <p className="text-sm ">{item.year}</p>
                   </div>
                   <div>
