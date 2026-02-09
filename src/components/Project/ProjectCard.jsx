@@ -13,15 +13,17 @@ export const ProjectCard = ({
     <>
       <div className="shrink-0 w-70 ">
         <div className="w-70 h-92 border border-[#D4D4D8] dark:border-[#52525C] rounded-lg flex flex-col dark:bg-[#18181B] overflow-hidden bg-[#ffffffb1] shadow-sm hover:shadow-md">
-          <div className="flex justify-center items-center w-full">
+          {/* Project Image */}
+
+          <div className="w-70 h-42  rounded overflow-hidden">
             <img
               src={projectImage}
-              alt="PurpleGPT Image"
-              className="transform hover:scale-102 transition-transform duration-300 ease-in-out"
+              alt=""
+              className="w-full h-full object-cover hover:scale-103 transition-ease-in-out duration-300"
             />
           </div>
 
-          <div className="px-4 py-4 h-full flex flex-col justify-between">
+          <div className="px-4 py-4 h-50 flex flex-col justify-between w-full ">
             {/* Project Name */}
             <div className="flex gap-4  items-center">
               <p className="text-xl font-semibold text-[#39A2FF] hover:underline cursor-pointer">
@@ -32,11 +34,15 @@ export const ProjectCard = ({
 
             {/* Description */}
             <div className=" leading-5 mt-2 text-sm text-[#9F9FA9] flex-1 line-clamp-4">
-              {description}
+              {description} Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Cumque, quidem. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Accusantium, quos. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Cumque, quidem. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Accusantium, quos.
             </div>
 
             {/* Links */}
-            <div className="flex flex-col gap-2 mt-2">
+            <div className="flex flex-col gap-2 mt-3">
               <div className="flex gap-2 items-center">
                 <Layers className="size-4 text-[#39A2FF]" />
                 <p className="text-xs">{techStack}</p>
