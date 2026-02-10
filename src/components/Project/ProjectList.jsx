@@ -13,7 +13,7 @@ export const ProjectList = ({
     <>
       <div className="flex flex-col gap-2 dark:text-[#9F9FA9] text-[#404040]">
         {/* Project Name */}
-        <div className="flex gap-4  items-center">
+        <div className="flex gap-4  items-center px-2">
           <p className="text-xl font-semibold text-[#39A2FF] hover:underline">
             {projectName}
           </p>
@@ -21,10 +21,12 @@ export const ProjectList = ({
         </div>
 
         {/* Description */}
-        <div className=" leading-5">{description}</div>
+        <div className=" leading-5 px-2 line-clamp-3 text-sm">
+          {description} 
+        </div>
 
         {/* Links */}
-        <div className="mt-4 flex gap-2 flex-col md:flex-col md:gap-2 sm:flex-row sm:gap-6 lg:flex-row lg:gap-8 transition-ease-in-out duration-200">
+        <div className="mt-2 flex gap-2 flex-col md:flex-col md:gap-2 sm:flex-row sm:gap-6 lg:flex-row lg:gap-8 transition-ease-in-out duration-200 px-2">
           <div className="flex gap-2 items-center">
             <Layers className="size-4 text-[#39A2FF]" />
             <p className="text-sm">{techStack}</p>

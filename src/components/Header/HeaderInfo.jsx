@@ -4,9 +4,27 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Search, Sun, Moon, Menu } from "lucide-react";
 import { ButtonComponent } from "../Common/ButtonComponent";
+import { useState, useEffect } from "react";
 
 export const HeaderInfo = () => {
   const { theme, setTheme, toggleTheme } = useContext(ThemeContext);
+
+  const [isSearch, setIsSearch] = useState(false);
+
+  // handle responsiveness
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 375) {
+        setIsSearch(true);
+      } else {
+        setIsSearch(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const themeBtnHandler = () => {
     toggleTheme();
@@ -29,12 +47,17 @@ export const HeaderInfo = () => {
           </Link>
         </div>
 
-        <div className="header-search-bar flex items-center gap-2 sm:gap-4 dark:text-[#E4E4E7] text-[#3F3F46]">
+        <div className="header-search-bar flex items-center gap-1 sm:gap-4 dark:text-[#E4E4E7] text-[#3F3F46]">
           {/* Search bar */}
 
-            <button className="border rounded-md cursor-pointer h-9 w-50 sm:w-64 md:w-72 border-[#D4D4D8] dark:border-[#52525C] flex  items-center text-center hover:shadow-md hover:bg-gray-200 transition-shadow dark:hover:bg-[#27272A] dark:bg-[#010409] bg-white duration-100 gap-1 sm:gap-4">
-              <Search className="size-5 ml-2 sm:ml-4" />
+          <button
+            className={`border rounded-md cursor-pointer h-9 ${isSearch ? "w-9 transition-ease-in-out duration-300" : "w-50 transition-ease-in-out duration-300"} sm:w-64 md:w-72 border-[#D4D4D8] dark:border-[#52525C] flex  items-center text-center hover:shadow-md hover:bg-gray-200 transition-shadow dark:hover:bg-[#27272A] dark:bg-[#010409] bg-white duration-100 gap-1 sm:gap-4`}
+          >
+            <Search className="size-5 ml-2 sm:ml-4" />
 
+            {isSearch ? (
+              " "
+            ) : (
               <p className="justify-center items-center  text-[14px] gap-1 ">
                 <span className="font-">Type</span>{" "}
                 <span className="border-2 text-[12px]  dark:border-[#52525C] border-[#D4D4D8] rounded-lg px-2 font-semibold dark:bg-[#27272A] bg-[#F4F4F5]">
@@ -42,15 +65,15 @@ export const HeaderInfo = () => {
                 </span>
                 <span className=""> to search</span>
               </p>
-            </button>
-         
+            )}
+          </button>
 
           {/* vertical line */}
           <div className="border h-7 rounded dark:border-[#52525C] border-[#D4D4D8] hidden sm:block"></div>
 
           {/* Theme Toggle button */}
 
-          <div className="flex gap-2">
+          <div className="flex gap-1 sm:gap-2">
             <ButtonComponent
               onClick={themeBtnHandler}
               icon={

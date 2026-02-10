@@ -12,6 +12,7 @@ export const Filter = ({
   const [isActive, setIsActive] = useState(false);
   const dropdownRef = useRef(null);
 
+  // Click outside dropdown close
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -41,6 +42,8 @@ export const Filter = ({
           />
         </div>
         <div className="h-8 border border-[#D4D4D8] dark:border-[#52525C] dark:bg-[#27272A] rounded-md"></div>
+
+        {/* Filter */}
         <div className="flex gap-1">
           <button
             className={`w-9 h-9 border border-[#D4D4D8] dark:border-[#52525C] rounded-md flex justify-center items-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] ${isFilterOpen === "grid" ? "text-[#39A2FF]" : ""}`}

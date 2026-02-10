@@ -1,11 +1,7 @@
 import { Filter } from "../components/Project/Filter";
 import { useState } from "react";
 import { ProjectTitle } from "../components/Project/ProjectTitle";
-import {
-  Nestinn,
-  PurpleGPT,
-  PurpleGPT1,
-} from "../assets/projectImages";
+import { Nestinn, PurpleGPT, PurpleGPT1 } from "../assets/projectImages";
 
 export const ProjectPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState("list");

@@ -11,7 +11,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <>
-      <div className="shrink-0 w-70 ">
+      <div className="shrink-0 w-70 px-2">
         <div className="w-70 h-92 border border-[#D4D4D8] dark:border-[#52525C] rounded-lg flex flex-col dark:bg-[#18181B] overflow-hidden bg-[#ffffffb1] shadow-sm hover:shadow-md">
           {/* Project Image */}
 
@@ -34,11 +34,7 @@ export const ProjectCard = ({
 
             {/* Description */}
             <div className=" leading-5 mt-2 text-sm text-[#9F9FA9] flex-1 line-clamp-4">
-              {description} Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Cumque, quidem. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Accusantium, quos. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Cumque, quidem. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Accusantium, quos.
+              {description} 
             </div>
 
             {/* Links */}
