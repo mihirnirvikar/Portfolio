@@ -44,9 +44,9 @@ export const Filter = ({
         <div className="h-8 border border-[#D4D4D8] dark:border-[#52525C] dark:bg-[#27272A] rounded-md"></div>
 
         {/* Filter */}
-        <div className="flex gap-1">
+        <div className="flex gap-1 dark:text-[#E4E4E7] text-[#3F3F46]">
           <button
-            className={`w-9 h-9 border border-[#D4D4D8] dark:border-[#52525C] rounded-md flex justify-center items-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] ${isFilterOpen === "grid" ? "text-[#39A2FF]" : ""}`}
+            className={`w-9 h-9 border border-[#D4D4D8] dark:border-[#52525C] rounded-md flex justify-center items-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] cursor-pointer ${isFilterOpen === "grid" ? "text-[#39A2FF]" : ""}`}
             onClick={(e) => {
               setIsFilterOpen("grid");
               e.stopPropagation();
@@ -55,7 +55,7 @@ export const Filter = ({
             <LayoutGrid className="size-5 stroke-2" />
           </button>
           <button
-            className={`w-9 h-9 border border-[#D4D4D8] dark:border-[#52525C] rounded-md flex justify-center items-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] ${isFilterOpen === "list" ? "text-[#39A2FF]" : ""}`}
+            className={`w-9 h-9 border border-[#D4D4D8] dark:border-[#52525C] rounded-md flex justify-center items-center hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] cursor-pointer ${isFilterOpen === "list" ? "text-[#39A2FF]" : ""}`}
             onClick={(e) => {
               setIsFilterOpen("list");
               e.stopPropagation();
@@ -66,7 +66,7 @@ export const Filter = ({
 
           <div ref={dropdownRef} className="">
             <button
-              className={`h-9 ml-2 z-20 px-3 py-1 flex items-center justify-center border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-sm hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31] ${isActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900 "}`}
+              className={`h-9 ml-2 z-20 px-3 py-1 flex items-center justify-center border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-sm hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31] cursor-pointer dark:text-[#E4E4E7] text-[#3F3F46] ${isActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900 "}`}
               onClick={(e) => {
                 setIsActive(!isActive);
                 e.stopPropagation();

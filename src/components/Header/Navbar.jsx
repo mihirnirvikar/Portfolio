@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   BookOpen,
   FolderKanban,
@@ -10,8 +11,9 @@ import {
   MessageSquareMore,
   Ellipsis,
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { ButtonComponent } from "../Common/ButtonComponent";
+import { AppContext } from "../../context/AppContext";
 
 export const Navbar = ({ setIsFixed }) => {
   const navItems = [
@@ -25,42 +27,66 @@ export const Navbar = ({ setIsFixed }) => {
   ];
 
   const [visibleCount, setVisibleCount] = useState(7);
-  const [isOpenMore, setIsOpenMore] = useState(false);
+  const [isMoreDisplay, setIsMoreDisplay] = useState(false);
+  const [isMoreActive, setIsMoreActive] = useState(false);
+  const moreRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { isNavItemSelected, setIsNavItemSelected } = useContext(AppContext);
+
+  useEffect(() => {
+    setIsNavItemSelected(location.pathname);
+  }, [location]);
+
+  // Click outside dropdown close
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (moreRef.current && !moreRef.current.contains(e.target)) {
+        setIsMoreActive(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   // handle responsiveness
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 200) {
         setVisibleCount(0);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else if (window.innerWidth < 310) {
         setVisibleCount(1);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else if (window.innerWidth < 460) {
         setVisibleCount(2);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else if (window.innerWidth < 590) {
         setVisibleCount(3);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else if (window.innerWidth < 710) {
         setVisibleCount(4);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else if (window.innerWidth < 830) {
         setVisibleCount(5);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else if (window.innerWidth < 900) {
         setVisibleCount(6);
-        setIsOpenMore(true);
+        setIsMoreDisplay(true);
       } else {
         setVisibleCount(7);
-        setIsOpenMore(false);
+        setIsMoreDisplay(false);
       }
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [visibleCount]);
 
   const visibleItems = navItems.slice(0, visibleCount);
   const hiddenItems = navItems.slice(visibleCount);
@@ -77,146 +103,11 @@ export const Navbar = ({ setIsFixed }) => {
 
   return (
     <>
-      {/* <nav className="navbar flex justify-between items-center  font-semibold text-[15px] duration-200 transition-ease-in-out sticky top-0 z-50 px-2 ">
-        <ul className="flex px-2 lg:px-6 dark:text-[#E4E4E7] text-[#2a2a2c] mt-1 ">
-          <NavLink to="/">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272a] rounded-sm w-28 md:w-26 lg:w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <BookOpen className="size-4 stroke-2" />
-                  <span>Overview</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/projects">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 md:w-24 lg:w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <FolderKanban className="size-4 stroke-2" />
-                  <span>Projects</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/achievements">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-35 md:w-32 lg:w-35 h-8 justify-center transition-ease-in-out duration-200">
-                  <Award className="size-4 stroke-2" />
-
-                  <span>Achievement</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/experience">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-32 md:w-28 lg:w-32 h-8 justify-center transition-ease-in-out duration-200">
-                  <IdCardLanyard className="size-4 stroke-2" />
-
-                  <span>Experience</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/educations">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 md:w-26 lg:w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <GraduationCap className="size-4 stroke-2" />
-
-                  <span>Education</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/resume">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 md:w-22 lg:w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <FileText className="size-4 stroke-2" />
-                  <span>Resume</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-
-          <NavLink to="/contact">
-            {({ isActive }) => (
-              <li
-                className={`h-10 ${
-                  isActive
-                    ? "border-b-2 border-orange-500 font-bold"
-                    : "font-normal"
-                }`}
-              >
-                <div className="flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm w-28 md:w-22 lg:w-28 h-8 justify-center transition-ease-in-out duration-200">
-                  <MessageSquareMore className="size-4 stroke-2" />
-
-                  <span>Contact</span>
-                </div>
-              </li>
-            )}
-          </NavLink>
-        </ul>
-        {
-          <div className="flex md:hidden">
-            <ButtonComponent
-              className="mb-2"
-              icon={<Ellipsis className="size-5 stroke-2" />}
-            />
-          </div>
-        }
-      </nav> */}
-
       <nav className="navbar w-full flex justify-between items-center  font-semibold text-[15px] duration-200 transition-ease-in-out sticky top-0 z-50 px-2 ">
         <ul className="flex w-full lg:px-6 px-2 dark:text-[#E4E4E7] text-[#2a2a2c] gap-2 mt-1">
-          {visibleItems.map((item) => {
+          {visibleItems.map((item, index) => {
             return (
-              <NavLink to={item.to}>
+              <NavLink to={item.to} key={index}>
                 {({ isActive }) => (
                   <li
                     className={`h-10 ${
@@ -224,6 +115,9 @@ export const Navbar = ({ setIsFixed }) => {
                         ? "border-b-2 border-orange-500 font-bold "
                         : "font-normal"
                     }`}
+                    onClick={() => {
+                      setIsNavItemSelected(item.to);
+                    }}
                   >
                     <div
                       className={`flex items-center gap-1 cursor-pointer hover:bg-[#E4E4E7] dark:hover:bg-[#27272a] rounded-sm h-8 justify-center transition-ease-in-out duration-200 px-4`}
@@ -238,11 +132,45 @@ export const Navbar = ({ setIsFixed }) => {
           })}
         </ul>
         {
-          <div className={`${isOpenMore ? "flex" : "hidden"}`}>
+          <div ref={moreRef} className={`${isMoreDisplay ? "flex" : "hidden"}`}>
             <ButtonComponent
-              className="mb-2"
+              className={`mb-2 ${isMoreActive ? "dark:bg-[#2e2e31] bg-[#E4E4E7] " : "dark:bg-zinc-900 "} hover:bg-[#E4E4E7] dark:hover:bg-[#2e2e31]`}
               icon={<Ellipsis className="size-5 stroke-2" />}
+              onClick={(e) => {
+                setIsMoreActive(!isMoreActive);
+                e.stopPropagation();
+              }}
             />
+
+            {isMoreActive && (
+              <div
+                className={`mt-10 -ml-33 transition-all duration-200 w-42 absolute rounded-md flex flex-col gap-1 justify-center items-center border border-[#D4D4D8] dark:border-[#52525C] dark:text-[#E4E4E7] text-[#2a2a2c] ${isMoreActive ? "dark:bg-[#010409] bg-[#F6F8FA] " : ""}`}
+              >
+                <div className="flex flex-col p-2 justify-center items-center w-full  text-center">
+                  {hiddenItems.map((item, index) => {
+                    return (
+                      <p
+                        className="hover:bg-[#E4E4E7] dark:hover:bg-[#27272a] w-full rounded h-8 flex justify-between items-center cursor-pointer gap-2 px-2"
+                        onClick={() => {
+                          setIsMoreActive(false);
+                          navigate(item.to);
+                          setIsNavItemSelected(item.to);
+                        }}
+                        key={index}
+                      >
+                        <span className="flex items-center gap-2">
+                          <item.icon className="size-4 stroke-2" />
+                          {item.label}
+                        </span>
+                        <span
+                          className={`w-2.5 h-2.5 rounded-full ${isNavItemSelected === item.to ? "bg-green-600" : ""}`}
+                        ></span>
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         }
       </nav>

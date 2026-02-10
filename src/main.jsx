@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PhotoProvider } from "react-photo-view";
+import { AppContextProvider } from "./context/AppContextProvider.jsx";
 
 import { App } from "./App.jsx";
 import { BodyPage } from "./layout/BodyPage.jsx";
@@ -71,9 +72,11 @@ createRoot(document.getElementById("root")).render(
       loop={true}
     >
       <TooltipProvider>
-        <ThemeProvider>
-          <RouterProvider router={router} />
-        </ThemeProvider>
+        <AppContextProvider>
+          <ThemeProvider>
+            <RouterProvider router={router} />
+          </ThemeProvider>
+        </AppContextProvider>
       </TooltipProvider>
     </PhotoProvider>
   </StrictMode>,
