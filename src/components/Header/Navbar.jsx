@@ -105,6 +105,7 @@ export const Navbar = ({ setIsFixed }) => {
     <>
       <nav className="navbar w-full flex justify-between items-center  font-semibold text-[15px] duration-200 transition-ease-in-out sticky top-0 z-50 px-2 ">
         <ul className="flex w-full lg:px-6 px-2 dark:text-[#E4E4E7] text-[#2a2a2c] gap-2 mt-1">
+          {/* Nav Items */}
           {visibleItems.map((item, index) => {
             return (
               <NavLink to={item.to} key={index}>
@@ -131,6 +132,8 @@ export const Navbar = ({ setIsFixed }) => {
             );
           })}
         </ul>
+
+        {/* More Button */}
         {
           <div ref={moreRef} className={`${isMoreDisplay ? "flex" : "hidden"}`}>
             <ButtonComponent
@@ -163,7 +166,7 @@ export const Navbar = ({ setIsFixed }) => {
                           {item.label}
                         </span>
                         <span
-                          className={`w-2.5 h-2.5 rounded-full ${isNavItemSelected === item.to ? "bg-green-600" : ""}`}
+                          className={`w-2.5 h-2.5 rounded-full ${isNavItemSelected === item.to ? "bg-green-400" : ""}`}
                         ></span>
                       </p>
                     );

@@ -5,6 +5,16 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { Search, Sun, Moon, Menu } from "lucide-react";
 import { ButtonComponent } from "../Common/ButtonComponent";
 import { useState, useEffect } from "react";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export const HeaderInfo = () => {
   const { theme, setTheme, toggleTheme } = useContext(ThemeContext);
@@ -85,21 +95,37 @@ export const HeaderInfo = () => {
               }
             />
 
-            <ButtonComponent icon={<Menu className="size-5 " />} />
-            {/* <button
-              className="theme-toggle cursor-pointer h-8.5 w-8.5 flex justify-center items-center rounded-md border-[#D4D4D8] dark:border-[#52525C] hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] border transition-colors duration-100"
-              onClick={themeBtnHandler}
-            >
-              {theme === "dark" ? (
-                <Sun className="size-5 " />
-              ) : (
-                <Moon className="size-5" />
-              )}
-            </button> */}
+            <Sheet>
+              <SheetTrigger>
+                <ButtonComponent icon={<Menu className="size-5 " />} />
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>
+                    <div className="flex gap-4 items-center">
+                      <img
+                        src={"/icon_mihir.jpg"}
+                        alt=""
+                        className="w-18 h-18 sm:w-20 sm:h-20 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="text-[18px]">Mihir Nirvikar</p>
+                        <p className="text-[#39A2FF] text-[15px]">
+                          Frontend Engineer
+                        </p>
+                      </div>
+                    </div>
+                  </SheetTitle>
+                  <SheetDescription>
+                    <p className="text-[12px] mt-2">
+                      🌱 Learning, building, and growing - one project at a
+                      time.
+                    </p>
 
-            {/* <button className="theme-toggle cursor-pointer p-1.5 rounded-md hover:bg-gray-200 border border-[#D4D4D8] dark:border-[#52525C] dark:hover:bg-[#27272A] transition-colors duration-100">
-              <Menu className="size-5 " />
-            </button> */}
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
