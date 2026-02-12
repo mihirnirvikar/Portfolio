@@ -78,7 +78,7 @@ export const Filter = ({
 
             {isActive && (
               <div
-                className={`mt-1 xl:ml-2 lg:-ml-4 md:-ml-8 sm:-ml-8 -ml-8 transition-all duration-200 w-26  absolute rounded-lg flex flex-col gap-1 justify-center items-center border border-[#D4D4D8] dark:border-[#52525C] ${isActive ? "dark:bg-zinc-800 bg-white " : ""}`}
+                className={`mt-1 xl:ml-2 lg:-ml-4 md:-ml-8 sm:-ml-8 -ml-8 transition-all duration-200 w-26  absolute rounded-md flex flex-col gap-1 justify-center items-center border border-[#D4D4D8] dark:border-[#52525C] ${isActive ? "dark:bg-zinc-800 bg-white " : ""}`}
               >
                 <span className="text-[10px] text-gray-400">
                   Select TechStack

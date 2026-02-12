@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Activity } from "lucide-react";
 
 export const HeaderInfo = () => {
   const { theme, setTheme, toggleTheme } = useContext(ThemeContext);
@@ -102,7 +103,7 @@ export const HeaderInfo = () => {
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle>
-                    <div className="flex gap-4 items-center">
+                    <div className="flex gap-3 items-center">
                       <img
                         src={"/icon_mihir.jpg"}
                         alt=""
@@ -117,11 +118,20 @@ export const HeaderInfo = () => {
                     </div>
                   </SheetTitle>
                   <SheetDescription>
-                    <p className="text-[12px] mt-2">
+                    <p className="text-[12px]">
                       🌱 Learning, building, and growing - one project at a
                       time.
                     </p>
 
+                    <div className="border border-[#D4D4D8] dark:border-[#323238] mt-2 bg-zinc-50 dark:bg-[#161B22] p-3 rounded-sm flex flex-col gap-2">
+                      <div className="flex gap-2 items-center">
+                        <Activity className="size-4 text-green-400" />
+                        <p className="text-[#EBF1F7]">Currently working on</p>
+                      </div>
+                      <p className="text-[12px] text-[#8B949E]">
+                        Exploring the world of web development
+                      </p>
+                    </div>
                   </SheetDescription>
                 </SheetHeader>
               </SheetContent>
