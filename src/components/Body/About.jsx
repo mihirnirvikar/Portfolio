@@ -69,7 +69,7 @@ export const About = () => {
                 >
                   <item.icon className="size-4 stroke-2" />
                   <a
-                    href={item.link}
+                    href={item.to}
                     className="hover:text-[#39A2FF] text-[#3F3F46] dark:text-[#E4E4E7] text-[14px]"
                     target="_blank"
                     rel="noopener noreferrer"

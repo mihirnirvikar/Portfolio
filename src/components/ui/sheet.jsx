@@ -16,7 +16,7 @@ const SheetPortal = SheetPrimitive.Portal
 const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-black/50  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-50 bg-black/70 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -25,11 +25,11 @@ const SheetOverlay = React.forwardRef(({ className, ...props }, ref) => (
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=closed]:duration-200 data-[state=open]:duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out",
+  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=closed]:duration-200 data-[state=open]:duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out ",
   {
     variants: {
       side: {
-        top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
+        top: "top-0 inset-x-0 md:left-1/2 md:-translate-x-1/2 m-2 h-75 md:h-100 border data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top min-w-0 max-w-3xl md:w-3xl rounded-lg dark:bg-[#0D1117] bg-[#FFFFFF] backdrop-blur-sm",
         bottom:
           "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
         left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
@@ -52,7 +52,7 @@ const SheetContent = React.forwardRef(
         className={cn(sheetVariants({ side }), className)}
         {...props}
       >
-        <SheetPrimitive.Close className="absolute right-4 top-4 rounded-md opacity-70 ring-offset-background transition-opacity   disabled:pointer-events-none data-[state=open]:bg-secondary hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] w-9 h-9 flex justify-center items-center border border-[#D4D4D8] dark:border-[#52525C]">
+        <SheetPrimitive.Close className="absolute right-2 top-2 rounded-md opacity-70 ring-offset-background transition-opacity   disabled:pointer-events-none data-[state=open]:bg-secondary hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] w-9 h-9 flex justify-center items-center border border-[#D4D4D8] dark:border-[#52525C]">
           <X className="h-6 w-6" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
