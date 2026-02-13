@@ -2,6 +2,33 @@ import { Link } from "react-router-dom";
 import { MapPin, Mail, Github, Linkedin, Phone } from "lucide-react";
 
 export const About = () => {
+  const contactLinks = [
+    {
+      to: "https://www.google.com/maps/place/Mumbai,+Maharashtra,+India/",
+      label: "Mumbai, India",
+      icon: MapPin,
+    },
+    {
+      to: "mailto:mihirnirvikar@gmail.com",
+      label: "mihirnirvikar@gmail.com",
+      icon: Mail,
+    },
+    {
+      to: "https://github.com/mihirnirvikar",
+      label: "Github",
+      icon: Github,
+    },
+    {
+      to: "https://www.linkedin.com/in/mihirnirvikar/",
+      label: "Linkedin",
+      icon: Linkedin,
+    },
+    {
+      to: "tel: +91 9876543210",
+      label: "+91 9876543210",
+      icon: Phone,
+    },
+  ];
   return (
     <>
       <div className="xl:w-76 xl:h-76 lg:w-76 lg:h-76 md:w-64 md:h-64 w-full h-full 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-4 px-4 sm:p-0 md:mt-10 md:mb-10 mt-6 mb-4 transition-ease-in-out duration-300">
@@ -16,7 +43,7 @@ export const About = () => {
             alt="Mihir Nirvikar Image"
           />
           <div className="">
-            <p className="mt-4 text-xl md:text-3xl font-semibold mb-2">
+            <p className="mdmt-4 text-xl md:text-3xl font-semibold mb-2">
               Mihir Nirvikar
             </p>
             <p className="text-[16px] md:text-lg font-medium text-[#39A2FF] text-start md:text-center">
@@ -24,7 +51,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <p className="mt-4 text-[16px] text-start ml-6">
+        <p className="mt-4 sm:text-[16px] text-sm text-start ml-6">
           🌱 Learning, building, and growing - one project at a time.
         </p>
 
@@ -33,54 +60,25 @@ export const About = () => {
 
         {/* About Details Container */}
         <div className="text-center ml-6 mt-6 dark:text-[#E4E4E7] text-[#3F3F46] hidden md:block">
-          {/* Location */}
-          <div className="flex items-center mb-2">
-            <MapPin className="size-4" />
-            <Link to="https://www.google.com/maps/place/Mumbai,+Maharashtra,+India/">
-              <span className="ml-2 hover:text-[#39A2FF]">Mumbai, India</span>
-            </Link>
-          </div>
-
-          {/* Email */}
-          <div className="flex items-center mb-2">
-            <Mail className="size-4" />
-            <a
-              className="ml-2 hover:text-[#39A2FF]"
-              href="mailto:q2GxT@mihirnirvikar@gmail.com"
-            >
-              mihirnirvikar@gmail.com
-            </a>
-          </div>
-
-          {/* GitHub */}
-          <div className="flex items-center mb-2">
-            <Github className="size-4" />
-            <a
-              className="ml-2 hover:text-[#39A2FF]"
-              href="https:github.com/mihirnirvikar"
-            >
-              MihirNirvikar
-            </a>
-          </div>
-
-          {/* Linkedin  */}
-          <div className="flex items-center mb-2">
-            <Linkedin className="size-4" />
-            {/* <a className="ml-2" href="https://www.linkedin.com/in/mihirnirvikar/">MihirNirvikar</a> */}
-            <Link
-              className="ml-2 hover:text-[#39A2FF]"
-              to="https://www.linkedin.com/in/mihirnirvikar/"
-            >
-              MihirNirvikar
-            </Link>
-          </div>
-
-          {/* Mobile No. */}
-          <div className="flex items-center mb-2">
-            <Phone className="size-4" />
-            <Link to="tel:+919876543210">
-              <span className="ml-2 hover:text-[#39A2FF]">+91-9876543210</span>
-            </Link>
+          <div className="mt-4 flex flex-col gap-2 mb-8">
+            {contactLinks.map((item, index) => {
+              return (
+                <div
+                  className="flex rounded-sm cursor-pointer gap-2 items-center text-[14px] text-[#3F3F46] dark:text-[#E4E4E7]"
+                  key={index}
+                >
+                  <item.icon className="size-4 stroke-2" />
+                  <a
+                    href={item.link}
+                    className="hover:text-[#39A2FF] text-[#3F3F46] dark:text-[#E4E4E7] text-[14px]"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.label}
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

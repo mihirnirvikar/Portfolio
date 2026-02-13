@@ -166,7 +166,7 @@ export const Navbar = ({ setIsFixed }) => {
                           {item.label}
                         </span>
                         <span
-                          className={`w-2.5 h-2.5 rounded-full ${isNavItemSelected === item.to ? "bg-green-400" : ""}`}
+                          className={`w-2 h-2 rounded-full ${isNavItemSelected === item.to ? "bg-green-400" : ""}`}
                         ></span>
                       </p>
                     );

@@ -2,7 +2,7 @@
 
 @plugin "tailwindcss-animate";
 
-@import 'react-photo-view/dist/react-photo-view.css';
+@import "react-photo-view/dist/react-photo-view.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -32,6 +32,8 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #64748b transparent;
   }
+
+  
 }
 
 /* Chrome, Edge, Safari */
@@ -57,6 +59,21 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
 }
+
+/* Hide scrollbar - Chrome, Safari, Edge */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar - Firefox */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbar - IE / Edge Legacy */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+  }
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
