@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import { Search, Sun, Moon, Menu } from "lucide-react";
+import { Search, Sun, Moon, Menu, Activity } from "lucide-react";
 import { ButtonComponent } from "../Common/ButtonComponent";
 import { useState, useEffect } from "react";
 import {
@@ -15,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Activity } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 
 export const HeaderInfo = () => {
   const { theme, setTheme, toggleTheme } = useContext(ThemeContext);
@@ -123,14 +123,34 @@ export const HeaderInfo = () => {
                       time.
                     </p>
 
-                    <div className="border border-[#D4D4D8] dark:border-[#323238] mt-2 bg-zinc-50 dark:bg-[#161B22] p-3 rounded-sm flex flex-col gap-2">
+                    <div className="border border-[#D4D4D8] dark:border-[#323238] mt-4 bg-zinc-50 dark:bg-[#161B22] p-3 rounded-sm flex flex-col gap-2 duration-200">
                       <div className="flex gap-2 items-center">
                         <Activity className="size-4 text-green-400" />
-                        <p className="text-[#EBF1F7]">Currently working on</p>
+                        <p className="dark:text-[#EBF1F7] text-[#3c3c3f] font-semibold">
+                          Currently working on
+                        </p>
                       </div>
                       <p className="text-[12px] text-[#8B949E]">
                         Exploring the world of web development
                       </p>
+                    </div>
+
+                    <div className="mt-4 font-semibold text-[16px]">
+                      <p>Settings</p>
+
+                      <div className="flex mt-4 gap-2 justify-between px-2 items-center">
+                        <div className="flex items-center gap-1">
+                          <Sun className="size-4" />
+                          <p>Light</p>
+                        </div>
+                        <div className="">
+                          <Switch onClick={themeBtnHandler} />
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Moon className="size-4" />
+                          <p>Dark</p>
+                        </div>
+                      </div>
                     </div>
                   </SheetDescription>
                 </SheetHeader>
