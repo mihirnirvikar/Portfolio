@@ -4,7 +4,7 @@ export const Welcome = () => {
   return (
     <>
       <p className="text-[13px]">
-        MihirNirvikar<span className="text-gray-500">/</span>Overview
+        MihirNirvikar<span className="text-gray-500"> / </span>Overview
         <span className="text-gray-500">.md</span>
       </p>
 
@@ -33,21 +33,21 @@ export const Welcome = () => {
       </div>
 
       <div className="p-2">
-        <h1 className="text-2xl font-semibold flex justify-center mt-8 mb-2">
+        <h1 className="text-lg md:text-xl font-semibold flex justify-center mt-8 mb-2">
           Welcome to My Digital Space
         </h1>
         <hr className="border-[#D4D4D8] dark:border-[#52525C]" />
 
-        <p className="px-2 leading-7 mt-4">
-          Hey there! I'm <b>Mihir Nirvikar</b>, a Full-Stack Developer and
+        <p className="px-2 leading-7 mt-4 text-[15px] dark:text-[#d6d6d6]">
+          Hey there! I'm <span className="font-semibold">Mihir Nirvikar</span>, a Full-Stack Developer and
           recently graduated student from Yeshwantrao Chavan College of
           Engineering, Nagpur, India. Here, I showcase my experience in creating
           scalable, performance-driven, and user-centric web applications with
           modern tech stacks.
         </p>
 
-        <div className="flex mt-4 ml-2 w-full">
-          <div className="w-1.5 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded xl:h-13 lg:h-13 md:h-18 sm:h-13 h-24 "></div>
+        <div className="flex mt-4 ml-2 w-full text-[14px]">
+          <div className="w-1.5 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded xl:h-13 lg:h-13 md:h-16 sm:h-13 h-20 "></div>
           <p className="text-[#656D8C] dark:text-[#848D97] ml-2">
             I believe in <em>learning by building</em> — every project here
             represents my dedication to solving real-world problems through

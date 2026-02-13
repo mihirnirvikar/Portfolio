@@ -29,12 +29,12 @@ import {
 export const TechStack = () => {
   return (
     <>
-      <div className="px-2 mb-4">
+      <div className="px-2 mb-4 dark:text-[#d6d6d6]">
         <h2 className="text-2xl mb-2 font-medium">💻 Tech Stack</h2>
         <hr className="border-[#D4D4D8] dark:border-[#52525C]" />
 
         <div>
-          <h1 className="flex justify-center mt-4 text-2xl font-semibold mb-4">
+          <h1 className="flex justify-center mt-4 text-xl font-semibold mb-2">
             Frontend
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
@@ -76,7 +76,7 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex  justify-center mt-8 text-2xl font-semibold mb-4">
+          <h1 className="flex  justify-center mt-8 text-xl font-semibold mb-2">
             Backend
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
@@ -109,7 +109,7 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-semibold mb-4">
+          <h1 className="flex justify-center mt-8 text-xl font-semibold mb-2">
             Languages
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
@@ -130,7 +130,7 @@ export const TechStack = () => {
         </div>
 
         <div>
-          <h1 className="flex justify-center mt-8 text-2xl font-semibold mb-4">
+          <h1 className="flex justify-center mt-8 text-xl font-semibold mb-2">
             Tools & Technologies
           </h1>
           <div className="flex flex-wrap justify-center gap-2">
@@ -169,8 +169,8 @@ export const TechStack = () => {
         </div>
 
         <div className="flex mt-8 px-2">
-          <div className="w-1.5 xl:h-13 lg:h-13 md:h-18 sm:h-13 h-22 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded"></div>
-          <p className="text-[#656D8C] dark:text-[#848D97] ml-2">
+          <div className="w-1.5 xl:h-8 lg:h-13 md:h-16 sm:h-13 h-20 mr-2 mb-4 transition-ease-in-out duration-200 bg-[#D0D7DE] dark:bg-[#30363D] rounded"></div>
+          <p className="text-[#656D8C] dark:text-[#848D97] ml-2 text-[14px]">
             Continuously exploring new tools, frameworks, and best practices to
             improve scalability, maintainability, and developer experience.
           </p>

@@ -31,7 +31,7 @@ export const About = () => {
   ];
   return (
     <>
-      <div className="xl:w-76 xl:h-76 lg:w-76 lg:h-76 md:w-64 md:h-64 w-full h-full 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-4 px-4 sm:p-0 md:mt-10 md:mb-10 mt-6 mb-4 transition-ease-in-out duration-300">
+      <div className="xl:w-76 xl:h-76 lg:w-76 lg:h-76 md:w-64 md:h-64 w-full h-full 2xl:ml-32 xl:ml-12 lg:ml-8 md:ml-4 sm:ml-4 px-4 sm:p-0 md:mt-10 md:mb-10 mt-6 mb-4 transition-ease-in-out duration-300 dark:text-[#d6d6d6]">
         {/* About Image Container */}
         <div className="flex flex-row xl:flex-col lg:flex-col md:flex-col sm:flex-row gap-4 md:gap-2 items-center text-start md:text-center overflow-hidden">
           <img
@@ -51,7 +51,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <p className="mt-4 sm:text-[16px] text-sm text-start ml-6">
+        <p className="mt-4 sm:text-[16px] dark:text-[#d6d6d6] text-sm text-start ml-6">
           🌱 Learning, building, and growing - one project at a time.
         </p>
 
@@ -59,7 +59,7 @@ export const About = () => {
         <div className="border-b-2 mt-4 text-[#F75C7E] hidden md:block"></div>
 
         {/* About Details Container */}
-        <div className="text-center ml-6 mt-6 dark:text-[#E4E4E7] text-[#3F3F46] hidden md:block">
+        <div className="text-center ml-6 mt-6 dark:text-[#d6d6d6] text-[#3F3F46] hidden md:block">
           <div className="mt-4 flex flex-col gap-2 mb-8">
             {contactLinks.map((item, index) => {
               return (
