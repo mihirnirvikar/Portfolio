@@ -63,10 +63,10 @@ export const HeaderInfo = () => {
                 {isSearch ? (
                   " "
                 ) : (
-                  <p className="justify-center items-center text-[14px] gap-1 ">
+                  <p className="flex justify-center items-center text-[14px] gap-1 ">
                     <span className="font-">Type</span>{" "}
-                    <span className="border text-[10px] dark:border-[#52525C] border-[#D4D4D8] rounded-lg px-2 py-0.5 font-semibold dark:bg-[#27272A] bg-[#F4F4F5]">
-                      Shift + /
+                    <span className="border text-[14px] dark:border-[#52525C] border-[#D4D4D8] rounded px-2 py-0.5  font-semibold dark:bg-[#27272A] bg-[#F4F4F5] ">
+                      /
                     </span>
                     <span className=""> to search</span>
                   </p>

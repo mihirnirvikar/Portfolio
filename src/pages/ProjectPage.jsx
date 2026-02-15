@@ -62,7 +62,7 @@ export const ProjectPage = () => {
     }
 
     if (search.trim() !== "") {
-      const query = search.toLowerCase();
+      const query = search.trim().toLowerCase();
 
       const matchesSearch =
         item.projectName.toLowerCase().includes(query) ||

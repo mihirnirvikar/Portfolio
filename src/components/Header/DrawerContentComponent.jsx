@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { DrawerItemComponent } from "./DrawerItemComponent";
+import { Search } from "lucide-react";
 
 export const DrawerContentComponent = () => {
   const [input, setInput] = useState("");
@@ -37,8 +38,10 @@ export const DrawerContentComponent = () => {
   ];
 
   const filterDrawerItems = drawerItems.map((ele) => {
+    const trimInput = input.trim();
+
     const filteredProjects = ele.items.filter((project) =>
-      project.name.toLowerCase().includes(input.toLowerCase()),
+      project.name.toLowerCase().includes(trimInput.toLowerCase()),
     );
 
     if (filteredProjects.length > 0) {
@@ -59,10 +62,11 @@ export const DrawerContentComponent = () => {
       <SheetContent side="top" className="">
         <SheetHeader>
           <SheetTitle>
-            <div className="w-[90%] md:w-[95%] rounded-md overflow-hidden h-10">
+            <div className="w-[90%] md:w-[95%] rounded-md overflow-hidden h-10 flex items-center gap-2 border border-[#D4D4D8] dark:border-[#52525C] hover:border-2 hover:border-[#39A2FF] focus-within:border-2 focus-within:border-[#39A2FF] text-[14px]">
+              <Search className="ml-2 text-gray-600 dark:text-gray-400 size-5" />
               <input
                 type="text"
-                className="w-full h-full px-3 border border-[#D4D4D8] dark:border-[#52525C] rounded-md text-[14px] focus:outline-none focus:border-2  focus:border-[#39A2FF] dark:text-gray-200 text-gray-800 "
+                className="w-full h-full outline-none font-normal "
                 placeholder="Search"
                 value={input}
                 onChange={(e) => {
