@@ -7,6 +7,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import { DrawerItemComponent } from "./DrawerItemComponent";
 
 export const DrawerContentComponent = () => {
   const [input, setInput] = useState("");
@@ -14,14 +15,15 @@ export const DrawerContentComponent = () => {
   const drawerItems = [
     {
       label: "Projects",
-      projects: [
+      items: [
         { name: "Nestinn", to: "/projects/nestinn" },
         { name: "PurpleGPT", to: "/projects/purpleGPT" },
       ],
+      tag: "Jump",
     },
     {
       label: "Pages",
-      navbarItems: [
+      items: [
         { name: "Overview", to: "/" },
         { name: "Projects", to: "/projects" },
         { name: "Achievements", to: "/achievements" },
@@ -30,47 +32,31 @@ export const DrawerContentComponent = () => {
         { name: "Resume", to: "/resume" },
         { name: "Contact", to: "/contact" },
       ],
+      tag: "Visit",
     },
   ];
 
-  const filteredDrawerItems = drawerItems.map((item) => {
-    if (item.projects) {
-      const filteredProjects = item.projects.filter((project) =>
-        project.name.toLowerCase().includes(input.toLowerCase()),
-      );
+  const filterDrawerItems = drawerItems.map((ele) => {
+    const filteredProjects = ele.items.filter((project) =>
+      project.name.toLowerCase().includes(input.toLowerCase()),
+    );
 
-      if (filteredProjects.length > 0) {
-        return {
-          ...item,
-          projects: filteredProjects,
-        };
-      }
-    }
-
-    if (item.navbarItems) {
-      const filteredNavbarItems = item.navbarItems.filter((navbarItem) =>
-        navbarItem.name.toLowerCase().includes(input.toLowerCase()),
-      );
-
-      if (filteredNavbarItems.length > 0) {
-        return {
-          ...item,
-          navbarItems: filteredNavbarItems,
-        };
-      }
+    if (filteredProjects.length > 0) {
+      return {
+        ...ele,
+        items: filteredProjects,
+      };
     }
 
     return null;
   });
 
-  console.log(filteredDrawerItems);
+  const filteredDrawerItems = filterDrawerItems.filter((item) => item !== null);
 
+  console.log(filteredDrawerItems);
   return (
     <>
-      <SheetContent
-        side="top"
-        className=""
-      >
+      <SheetContent side="top" className="">
         <SheetHeader>
           <SheetTitle>
             <div className="w-[90%] md:w-[95%] rounded-md overflow-hidden h-10">
@@ -87,69 +73,39 @@ export const DrawerContentComponent = () => {
           </SheetTitle>
           <SheetDescription></SheetDescription>
         </SheetHeader>
-        <div className="overflow-y-auto no-scrollbar scroll-smooth h-[39vh] md:h-[60vh]">
+        <div className="overflow-y-auto no-scrollbar scroll-smooth h-[39vh] md:h-[44vh]">
           <hr className="mt-2" />
-          {filteredDrawerItems.map((item, index) => {
-            return (
-              <div className="mt-1 ml-2" key={index}>
-                <p className="mb-1 text-[16px] font-semibold dark:text-[#d6d6d6] text-[#52525C]">
-                  {item.label}
-                </p>
 
-                {item.projects ? (
+          {filteredDrawerItems.length === 0 ? (
+            <div className="mt-4 px-2">
+              <p className="mb-1 text-[14px] font-semibold dark:text-[#d6d6d6] text-[#52525C]">
+                😔 Oops! No results found
+              </p>
+            </div>
+          ) : (
+            filteredDrawerItems.map((ele, index) => {
+              return (
+                <div className="mt-1 ml-2" key={index}>
+                  <p className="mb-1 text-[16px] font-semibold dark:text-[#d6d6d6] text-[#52525C]">
+                    {ele.label}
+                  </p>
+
                   <div>
-                    {item.projects.map((project, index) => {
+                    {ele.items.map((project, index) => {
                       return (
-                        <div
+                        <DrawerItemComponent
                           key={index}
-                          className="flex h-8 w-full px-4 hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm cursor-pointer items-center text-[14px] text-[#3F3F46] dark:text-[#E4E4E7] group"
-                        >
-                          <img
-                            src={"/icon_mihir.jpg"}
-                            alt=""
-                            className="w-5 h-5 mr-2 rounded-full object-cover"
-                          />
-                          <p>MihirNirvikar/</p>
-                          <a
-                            href={project.to}
-                            className="group-hover:text-[#39A2FF]"
-                          >
-                            {project.name}
-                          </a>
-                        </div>
+                          projectTo={project.to}
+                          projectName={project.name}
+                          tag={ele.tag}
+                        />
                       );
                     })}
                   </div>
-                ) : (
-                  <div>
-                    {item.navbarItems.map((navbarItem, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="flex h-8 w-full px-4 hover:bg-[#E4E4E7] dark:hover:bg-[#27272A] rounded-sm cursor-pointer items-center text-[14px] text-[#3F3F46] dark:text-[#E4E4E7] group "
-                        >
-                          <img
-                            src={"/icon_mihir.jpg"}
-                            alt=""
-                            className="w-5 h-5 mr-2 rounded-full object-cover"
-                          />
-                          <p className="dark:text-gray-400 text-gray-500">
-                            MihirNirvikar/
-                          </p>
-                          <a
-                            href={navbarItem.to}
-                            className="group-hover:text-[#39A2FF]"
-                          >
-                            {navbarItem.name}
-                          </a>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                </div>
+              );
+            })
+          )}
         </div>
       </SheetContent>
     </>

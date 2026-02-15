@@ -29,7 +29,7 @@ const sheetVariants = cva(
   {
     variants: {
       side: {
-        top: "top-0 inset-x-0 md:left-1/2 md:-translate-x-1/2 m-2 h-[50vh] md:h-[60vh] border data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top min-w-0 max-w-3xl md:w-3xl rounded-lg dark:bg-[#0D1117] bg-[#FFFFFF] backdrop-blur-sm",
+        top: "top-0 inset-x-0 md:left-1/2 md:-translate-x-1/2 m-2 h-[50vh] md:h-[55vh] border data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top min-w-0 max-w-3xl md:w-3xl rounded-lg dark:bg-[#0D1117] bg-[#FFFFFF] backdrop-blur-sm",
         bottom:
           "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
         left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",

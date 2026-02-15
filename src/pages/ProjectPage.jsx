@@ -90,6 +90,14 @@ export const ProjectPage = () => {
           <div
             className={`${isFilterOpen === "list" ? "flex flex-col" : "flex flex-wrap gap-6 justify-start"} min-h-0 max-h-full`}
           >
+            {filteredProjects.length === 0 && (
+              <div className=" px-2">
+                <p className="mb-1 text-[14px] font-semibold dark:text-[#d6d6d6] text-[#52525C]">
+                  😔 Oops! No results found
+                </p>
+              </div>
+            )}
+
             {filteredProjects.map((item) => {
               return (
                 <ProjectTitle
