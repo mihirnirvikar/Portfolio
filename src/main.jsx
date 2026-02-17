@@ -4,6 +4,7 @@ import { ThemeProvider } from "./context/ThemeContext.jsx";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { PhotoProvider } from "react-photo-view";
 import { AppContextProvider } from "./context/AppContextProvider.jsx";
+import { Worker } from "@react-pdf-viewer/core";
 
 import { App } from "./App.jsx";
 import { BodyPage } from "./layout/BodyPage.jsx";
@@ -71,6 +72,7 @@ createRoot(document.getElementById("root")).render(
       maskOpacity={0.8}
       loop={true}
     >
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
       <TooltipProvider>
         <AppContextProvider>
           <ThemeProvider>
@@ -78,6 +80,7 @@ createRoot(document.getElementById("root")).render(
           </ThemeProvider>
         </AppContextProvider>
       </TooltipProvider>
+      </Worker>
     </PhotoProvider>
   </StrictMode>,
 );

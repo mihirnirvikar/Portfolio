@@ -62,7 +62,7 @@ export const ExperienceCard = () => {
           <div className="flex gap-1 px-3">
             <div className="flex flex-wrap gap-1 mt-2">
               {skillSet.map((item, index) => {
-                return <SkillTagComponent skillName={item} />;
+                return <SkillTagComponent skillName={item} index={index} />;
               })}
             </div>
           </div>

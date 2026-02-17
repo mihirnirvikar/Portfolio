@@ -56,7 +56,7 @@ export const DrawerContentComponent = () => {
 
   const filteredDrawerItems = filterDrawerItems.filter((item) => item !== null);
 
-  console.log(filteredDrawerItems);
+  // console.log(filteredDrawerItems);
   return (
     <>
       <SheetContent side="top" className="">
