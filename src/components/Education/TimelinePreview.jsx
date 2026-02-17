@@ -62,10 +62,10 @@ export const TimelinePreview = () => {
               </div>
 
               {/* Dot */}
-              <div className="absolute -left-2 sm:-left-2 md:left-0 -translate-x-1/2 w-5 h-5 rounded-full bg-orange-500 border-4 dark:border-gray-950 border-neutral-800" />
+              <div className="absolute -left-2 sm:-left-2 md:left-0 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 border-2 dark:border-gray-950 border-neutral-800" />
 
               {/* Horizontal line */}
-              <div className="absolute left-3 sm:left-3 md:left-5 top-1/2 w-5 sm:w-5 md:w-7.5 h-0.5 -translate-y-1/2 -translate-x-2.5 dark:bg-[#52525C] bg-[#D4D4D8]" />
+              <div className="absolute left-3 sm:left-3 md:left-5 top-1/2 w-6 sm:w-6 md:w-8 h-0.5 -translate-y-1/2 -translate-x-3 dark:bg-[#52525C] bg-[#D4D4D8]" />
             </div>
           ))}
         </div>

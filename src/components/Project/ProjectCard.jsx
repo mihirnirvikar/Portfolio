@@ -33,18 +33,18 @@ export const ProjectCard = ({
             </div>
 
             {/* Description */}
-            <div className=" leading-5 mt-2 text-sm text-[#9F9FA9] flex-1 line-clamp-4">
+            <div className=" leading-5 mt-1 text-xs dark:text-[#9F9FA9] text-[#404040] flex-1 line-clamp-3 ">
               {description} 
             </div>
 
             {/* Links */}
-            <div className="flex flex-col gap-2 mt-3">
+            <div className="flex flex-col gap-2 mt-2">
               <div className="flex gap-2 items-center">
                 <Layers className="size-4 text-[#39A2FF]" />
                 <p className="text-xs">{techStack}</p>
               </div>
 
-              <div className="flex gap-2 justify-center mt-1">
+              <div className="flex gap-2 justify-center">
                 <a
                   className="flex gap-2 items-center justify-center text-center px-9 py-1.5  text-xs rounded-md hover:bg-[#1041d2e1] bg-[#265cfc] text-white"
                   href={externalLink}

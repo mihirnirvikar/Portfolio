@@ -22,20 +22,20 @@ export const ProjectList = ({
 
         {/* Description */}
         <div className=" leading-5 px-2 line-clamp-3 text-sm">
-          {description} 
+          {description}
         </div>
 
         {/* Links */}
-        <div className="mt-2 flex gap-2 flex-col md:flex-col md:gap-2 sm:flex-row sm:gap-6 lg:flex-row lg:gap-8 transition-ease-in-out duration-200 px-2">
+        <div className="mt-2 flex gap-2 flex-col md:flex-col md:gap-2 sm:flex-row sm:gap-6 lg:flex-row lg:gap-8 transition-ease-in-out duration-200 px-2 ">
           <div className="flex gap-2 items-center">
             <Layers className="size-4 text-[#39A2FF]" />
-            <p className="text-sm">{techStack}</p>
+            <p className="text-xs ">{techStack}</p>
           </div>
 
           <div className="flex gap-2 items-center  hover:text-[#39A2FF] text-xs">
             <ExternalLink className="size-4" />
             <a href={externalLink} target="_blank" rel="noreferrer">
-              {externalLink}
+              Link
             </a>
           </div>
 

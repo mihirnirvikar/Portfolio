@@ -1,7 +1,7 @@
 import { Filter } from "../components/Project/Filter";
 import { useState } from "react";
 import { ProjectTitle } from "../components/Project/ProjectTitle";
-import { Nestinn, PurpleGPT, PurpleGPT1 } from "../assets/projectImages";
+import { Nestinn, PurpleGPT, PurpleGPT1, PortFolio } from "../assets/projectImages";
 
 export const ProjectPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState("list");
@@ -12,8 +12,9 @@ export const ProjectPage = () => {
     {
       id: 1,
       projectName: "Nestinn",
-      description: "description My name is mihir",
-      techStack: "MERN Stack",
+      description:
+        "NestInn is a MERN-based property listing app that enables users to discover and explore a wide range of rental properties. It stays while allowing owners to manage and showcase their properties.",
+      techStack: "Node.js, Express.js, MongoDB, Ejs, BootstrapCSS.",
       externalLink: "https://nestinn-production.up.railway.app/listings",
       github: "https://github.com/mihirnirvikar/nestinn",
       projectImage: Nestinn,
@@ -22,8 +23,9 @@ export const ProjectPage = () => {
     {
       id: 2,
       projectName: "PurpleGPT",
-      description: "description My name is mihir",
-      techStack: "MERN Stack",
+      description:
+        "PurpleGPT is an AI chat web app that delivers real-time intelligent conversations with a customizable themed interface and responsive user experience.",
+      techStack: "MERN Stack, TailwindCSS",
       externalLink: "https://purplegpt.netlify.app/",
       github: "https://github.com/mihirnirvikar/PurpleGPT",
       projectImage: PurpleGPT1,
@@ -31,23 +33,13 @@ export const ProjectPage = () => {
     },
     {
       id: 3,
-      projectName: "Nestinn",
-      description: "description My name is mihir",
-      techStack: "MERN Stack",
-      externalLink: "https://github.com/mihirnirvikar/nestinn",
-      github: "https://github.com/mihirnirvikar/nestinn",
-      projectImage: Nestinn,
-      type: ["backend"],
-    },
-
-    {
-      id: 4,
-      projectName: "Nestinn",
-      description: "description My name is mihir",
-      techStack: "MERN Stack",
-      externalLink: "https://github.com/mihirnirvikar/nestinn",
-      github: "https://github.com/mihirnirvikar/nestinn",
-      projectImage: Nestinn,
+      projectName: "PortFolio",
+      description:
+        "Built a GitHub-inspired portfolio website to showcase projects and skills with repository-style layouts, theme toggle, and responsive design.",
+      techStack: "React.js, JavaScript",
+      externalLink: "https://mihir-portfolio-website-flame.vercel.app/",
+      github: "https://github.com/mihirnirvikar/portfolio",
+      projectImage: PortFolio,
       type: ["frontend"],
     },
   ];

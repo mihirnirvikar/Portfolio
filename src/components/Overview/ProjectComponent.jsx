@@ -1,5 +1,6 @@
 import { Bookmark, Layers } from "lucide-react";
 import { PublicBadge } from "../Common/PublicBadge";
+import { Link } from "react-router-dom";
 
 export const ProjectComponent = ({ projectName, projectDesc, skills }) => {
   return (
@@ -9,7 +10,12 @@ export const ProjectComponent = ({ projectName, projectDesc, skills }) => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Bookmark className="size-4 dark:text-[#E4E4E7] text-[#3F3F46]" />
-            <p className="ml-1 text-[#39A2FF] font-semibold hover:underline">{projectName}</p>
+            <Link
+              to="/projects"
+              className="ml-1 text-[#39A2FF] font-semibold hover:underline"
+            >
+              {projectName}
+            </Link>
           </div>
 
           <PublicBadge />
@@ -17,20 +23,7 @@ export const ProjectComponent = ({ projectName, projectDesc, skills }) => {
 
         {/* Description */}
         <div className="text-sm mt-2 leading-5 flex-1 min-h-0 max-h-24 overflow-y-auto no-scrollbar scroll-smooth">
-          <p>
-            {projectDesc} Lorem ipsum dolor sit, amet consectetur adipisicing
-            elit. Placeat nemo natus deleniti deserunt iusto, illum, vero itaque
-            ea quasi facere ipsa sequi, molestiae molestias. Culpa reiciendis
-            nulla eius asperiores. Quo tempore id ipsa? Officia amet eius
-            dolorum neque quis totam sapiente, reprehenderit dicta perferendis
-            ab consequuntur sed adipisci maxime autem ex, rerum assumenda
-            commodi illum nemo tempore earum. Deserunt aliquid unde labore,
-            consequuntur autem maiores nulla placeat ad perspiciatis nesciunt
-            architecto totam quo voluptate, dignissimos excepturi harum,
-            asperiores vel veritatis modi corrupti. Deserunt voluptate est
-            laborum odit, molestiae minus facilis repudiandae autem magnam
-            minima ipsam repellat saepe nihil esse ut.{" "}
-          </p>
+          <p>{projectDesc}</p>
         </div>
 
         {/* Technologies used */}

@@ -2,9 +2,9 @@ import { Asterisk, ArrowRight, MoveLeft, Send } from "lucide-react";
 import { useState } from "react";
 
 export const ContactCard = () => {
-  const [name, setName] = useState("mihir");
-  const [email, setEmail] = useState("mihirnirvikar@gmail.com");
-  const [message, setMessage] = useState("hello");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [receivedData, setReceivedData] = useState("");
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -40,7 +40,7 @@ export const ContactCard = () => {
 
   return (
     <>
-      <div className="mt-8 px-4">
+      <div className="mt-8 px-4 mb-4">
         <form onSubmit={formSubmitHandler}>
           {/* Name */}
           <div className="flex flex-col w-full">
@@ -124,7 +124,7 @@ export const ContactCard = () => {
             </div>
           )}
 
-          <div className="mt-6 hidden md:flex gap-2 ">
+          <div className="mt-8 hidden md:flex gap-2 ">
             <MoveLeft className="size-6 stroke-2" />
             <p className="text-[16px]">
               Alternatively, you can contact me on my socials

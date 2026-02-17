@@ -25,9 +25,9 @@ export const ResumeViewer = () => {
           } = slots;
 
           return (
-            <div className="flex items-center gap-3 px-3 py-2 w-full justify-between  text-black">
+            <div className="flex items-center gap-3 px-3 py-2 w-full justify-between  text-black mt-1">
               {/* Page Navigation */}
-              <div className="flex flex-1 lg:flex items-center gap-1">
+              <div className="flex flex-1 sm:flex-none items-center gap-1">
                 <GoToPreviousPage />
                 <CurrentPageInput /> / <NumberOfPages />
               </div>
@@ -40,7 +40,7 @@ export const ResumeViewer = () => {
               </div>
 
               {/* Actions */}
-              <div className="flex items-center " />
+              <div className="flex items-center gap-1" />
               <EnterFullScreen />
               <Download />
               <Print />
