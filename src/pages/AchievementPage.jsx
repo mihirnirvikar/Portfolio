@@ -23,7 +23,7 @@ export const AchievementPage = () => {
       ],
       image: patentImage,
       link: "https://ycce.edu/wp-content/uploads/2026/01/65.-202421090296.pdf",
-      date: "July-2025",
+      date: "Dec-2025",
     },
     {
       logo: ieeeLogo,
@@ -40,7 +40,7 @@ export const AchievementPage = () => {
       ],
       image: researchPaperImage,
       link: "https://ieeexplore.ieee.org/document/11034862",
-      date: "Dec-2025",
+      date: "July-2025",
     },
   ];
 

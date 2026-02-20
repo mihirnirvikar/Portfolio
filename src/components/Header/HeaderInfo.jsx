@@ -7,11 +7,14 @@ import { useState, useEffect, useContext } from "react";
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { SheetContentComponent } from "./SheetContentComponent";
 import { DrawerContentComponent } from "./DrawerContentComponent";
+import { AppContext } from "../../context/AppContext";
 
 export const HeaderInfo = () => {
   const { theme, setTheme, toggleTheme } = useContext(ThemeContext);
 
   const [isSearch, setIsSearch] = useState(false);
+
+  const { showSearchDrawer, setShowSearchDrawer } = useContext(AppContext);
 
   // handle responsiveness
   useEffect(() => {
@@ -57,6 +60,7 @@ export const HeaderInfo = () => {
               <button
                 className={`border rounded-md cursor-pointer h-9 ${isSearch ? "w-9 transition-ease-in-out duration-300" : "w-50 transition-ease-in-out duration-300"} sm:w-64 md:w-72 border-[#D4D4D8] dark:border-[#52525C] flex  items-center text-center hover:shadow-md hover:bg-gray-200 transition-shadow dark:hover:bg-[#27272A] dark:bg-[#010409] bg-white duration-100 gap-1 sm:gap-4`}
                 type="button"
+                onClick={() => setShowSearchDrawer(true)}
               >
                 <Search className="size-5 ml-2 sm:ml-4" />
 
@@ -73,7 +77,9 @@ export const HeaderInfo = () => {
                 )}
               </button>
             </SheetTrigger>
-            <DrawerContentComponent />
+            {/* <SheetContentComponent /> */}
+
+            {showSearchDrawer ? <DrawerContentComponent /> : ""}
           </Sheet>
 
           {/* vertical line */}

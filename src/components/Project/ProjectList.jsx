@@ -32,9 +32,14 @@ export const ProjectList = ({
             <p className="text-xs ">{techStack}</p>
           </div>
 
-          <div className="flex gap-2 items-center  hover:text-[#39A2FF] text-xs">
+          <div className="flex gap-2 items-center   text-xs">
             <ExternalLink className="size-4" />
-            <a href={externalLink} target="_blank" rel="noreferrer">
+            <a
+              href={externalLink}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#39A2FF]"
+            >
               Link
             </a>
           </div>
